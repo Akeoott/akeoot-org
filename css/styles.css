@@ -4,46 +4,69 @@
   --link-color: #58a6ff;
   --header-footer-bg: #1a1f2b;
   --header-footer-text: #c9d1d9;
+  --background-image: url(/images/slanted-gradient.svg);
+  --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-shadow: var(--text-shadow);
     margin: 0;
-    background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
+    margin-left: 150px;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 1500px;
     padding-top: 50px;
 }
 
-.top-bar {
-    background-color: var(--header-footer-bg);
-    padding: 10px 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.sidebar {
+    height: 100%;
+    width: 150px;
     position: fixed;
+    z-index: 150;
     top: 0;
     left: 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--text-color);
+    background-color: var(--header-footer-bg);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    border-right: 1px solid var(--text-color);
 }
-.top-bar nav a {
-    margin: 0 15px;
-    color: var(--link-color);
-    font-weight: bold;
+.sidebar nav a {
+    padding: 8px 8px 8px 15px;
     text-decoration: none;
+    font-size: 20px;
+    color: var(--link-color);
+    display: block;
+    transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box;
 }
-.top-bar nav a:hover {
+
+.sidebar nav a:hover {
+    color: var(--link-color);
+    background-color: rgba(255, 255, 255, 0.1);
     text-decoration: underline;
 }
 
 .main-content {
-    flex: 1;
-    padding: 40px 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
+
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -62,11 +85,9 @@ a:hover {
     text-decoration: underline;
 }
 
-.about-section {
-    background-color: var(--header-footer-bg);
+.footer-section {
     color: var(--header-footer-text);
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 0.9em;
-    border-top: 1px solid var(--text-color);
 }

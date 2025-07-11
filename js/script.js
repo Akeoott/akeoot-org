@@ -7,5 +7,5 @@ function loadHTML(url, elementId) {
         .catch(error => console.error('Error loading HTML:', error));
 }
 
-loadHTML('/includes/header.html', 'header-placeholder');
+loadHTML('/includes/sidebar.html', 'sidebar-placeholder');
 loadHTML('/includes/footer.html', 'footer-placeholder');
