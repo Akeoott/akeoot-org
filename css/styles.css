@@ -1,3 +1,4 @@
+/* --- Main Style and variables --- */
 :root {
   --background-color: #0d1117;
   --text-color: #c9d1d9;
@@ -25,6 +26,9 @@ body {
     padding-top: 50px;
 }
 
+/* --- Objects --- */
+
+/* sidebar style */
 .sidebar {
     height: 100%;
     width: 175px;
@@ -60,6 +64,15 @@ body {
     text-decoration: underline;
 }
 
+/* footer style */
+.footer-section {
+    color: var(--header-footer-text);
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 0.9em;
+}
+
+/* --- General Style --- */
 .main-content {
     padding: 20px;
     display: flex;
@@ -84,11 +97,4 @@ a {
 }
 a:hover {
     text-decoration: underline;
-}
-
-.footer-section {
-    color: var(--header-footer-text);
-    text-align: center;
-    padding: 5px 20px;
-    font-size: 0.9em;
 }
