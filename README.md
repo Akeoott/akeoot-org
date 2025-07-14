@@ -25,6 +25,5 @@ Since it always changes, here are some general rules I follow!
   - `css/`
   - `images/`
   - `includes/`
-  - `functions/`
 
 ---
