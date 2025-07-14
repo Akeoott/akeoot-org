@@ -20,7 +20,7 @@ body {
     margin: 0;
     color: var(--text-color);
     display: flex;
-    margin-left: 150px;
+    margin-left: 175px;
     flex-direction: column;
     min-height: 1500px;
     padding-top: 50px;

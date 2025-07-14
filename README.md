@@ -16,6 +16,7 @@ Since it always changes, here are some general rules I follow!
   - `index.html` (Main page)
   - `projects/index.html`
   - `contact/index.html`
+  - `corner/index.html`
 - For short, every dir that isnt listed below is a page dir.
 
 #### NOT page directories are:
@@ -24,5 +25,6 @@ Since it always changes, here are some general rules I follow!
   - `css/`
   - `images/`
   - `includes/`
+  - `functions/`
 
 ---
