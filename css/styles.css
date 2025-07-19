@@ -1,90 +1,58 @@
+/*
+    © 2025 Akeoott. All rights reserved.
+*/
+
 /* --- Main Style and variables --- */
 :root {
-  --background-color: #0d1117;
-  --text-color: #c9d1d9;
-  --link-color: #58a6ff;
-  --header-footer-bg: #1a1f2b;
-  --header-footer-text: #c9d1d9;
-  --background-image: url(/images/slanted-gradient.svg);
-  --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
+    --background-color: #0d1117;
+    --background-color-lowop: rgba(13, 17, 23, 0.3);
+    --background-image: url(/images/slanted-gradient.svg);
+    --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
+    --text-color: #c9d1d9;
+    --link-color: #58a6ff;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    min-height: 1500px;
+    margin: 0;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
     background-image: var(--background-image);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    text-shadow: var(--text-shadow);
-    margin: 0;
     color: var(--text-color);
-    display: flex;
-    margin-left: 175px;
-    flex-direction: column;
-    min-height: 1500px;
-    padding-top: 50px;
+    text-shadow: var(--text-shadow);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-/* --- Objects --- */
-
-/* sidebar style */
-.sidebar {
-    height: 100%;
-    width: 175px;
-    position: fixed;
-    z-index: 150;
-    top: 0;
-    left: 0;
-    text-align: center;
-    background-color: var(--header-footer-bg);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    border-right: 1px solid var(--text-color);
-}
-.sidebar nav a {
-    padding: 8px 8px 8px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: var(--link-color);
-    display: block;
-    transition: 0.3s;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.sidebar nav a:hover {
-    color: var(--link-color);
-    background-color: rgba(255, 255, 255, 0.1);
-    text-decoration: underline;
-}
-
-/* footer style */
-.footer-section {
-    color: var(--header-footer-text);
-    text-align: center;
-    padding: 5px 20px;
-    font-size: 0.9em;
-}
 
 /* --- General Style --- */
 .main-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    display: flex;
+}
+.main-container {
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 60%;
+    background-color: var(--background-color-lowop);
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+div.main-container {
+    transition: 0.5s;
+    position: relative;
+    left: 22.5%;
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}
 h1 {
     color: var(--text-color);
 }

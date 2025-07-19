@@ -1,0 +1,81 @@
+/*
+    © 2025 Akeoott. All rights reserved.
+*/
+
+/* main config*/
+.sidebar-main {
+    width: 175px;
+    z-index: 150;
+    top: 12px;
+    bottom: 12px;
+    left: 10px;
+    border-radius: 20px;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.5s;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color-lowop);
+}
+
+/* tag config */
+.sidebar-main nav {
+    width: 100%;
+    text-align: center;
+}
+
+/* tags in <nav> */
+.sidebar-main nav h2 {
+    padding: 8px 8px 8px 15px;
+    display: block;
+    transition: 0.5s;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+.sidebar-main nav p {
+    padding: 0px 8px 0px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.5s;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+.sidebar-main nav a {
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--link-color);
+    display: block;
+    transition: 0.5s;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+.sidebar-main nav hr {
+    width: 100%;
+    margin: 0;
+    height: 2px;
+    border-width: 0;
+    color: #333333;
+    background-color: #333333;
+}
+.sidebar-main nav a:hover {
+    border-radius: 20px;
+    color: var(--link-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: underline;
+}

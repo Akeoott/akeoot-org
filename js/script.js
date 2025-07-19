@@ -1,3 +1,7 @@
+/*
+    © 2025 Akeoott. All rights reserved.
+*/
+
 function loadHTML(url, elementId) {
     fetch(url)
         .then(response => response.text())
@@ -6,6 +10,3 @@ function loadHTML(url, elementId) {
         })
         .catch(error => console.error('Error loading HTML:', error));
 }
-
-loadHTML('/includes/sidebar.html', 'sidebar-placeholder');
-loadHTML('/includes/footer.html', 'footer-placeholder');
