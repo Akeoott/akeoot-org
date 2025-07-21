@@ -4,32 +4,56 @@
 
 /* --- Main Style and variables --- */
 :root {
+    /* Background/Colors */
     --background-color: #0d1117;
     --background-color-lowop: rgba(13, 17, 23, 0.3);
-    --background-image: url(/images/slanted-gradient.svg);
-    --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
+    --background-image: url(/docs/images/slanted-gradient.svg);
+    /* Text */
     --text-color: #c9d1d9;
+    --header-color: #ffffff;
+    --note-color: darkgrey;
     --link-color: #58a6ff;
+    --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
 }
 
 body {
+    /* Area */
     min-height: 1500px;
     margin: 0;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
+    /* Background */
     background-image: var(--background-image);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    /* Text*/
     color: var(--text-color);
     text-shadow: var(--text-shadow);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-family: sans-serif;
 }
 
 
 /* --- General Style --- */
+
+/* Container of content */
+.main-container {
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 60%;
+    border: 2px solid #333;
+    background-color: var(--background-color-lowop);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+div.main-container {
+    transition: 0.5s;
+    position: relative;
+    left: 22.5%;
+}
+
+/* Content style */
 .main-content {
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -39,25 +63,31 @@ body {
     flex-direction: column;
     display: flex;
 }
-.main-container {
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 60%;
-    background-color: var(--background-color-lowop);
-    border: 2px solid #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+div.content-header {
+    line-height: .5;
 }
-div.main-container {
-    transition: 0.5s;
-    position: relative;
-    left: 22.5%;
+div.content-header blockquote {
+    color: var(--note-color);
 }
 
-h1 {
-    color: var(--text-color);
+/* General */
+h1, h2 {
+    color: var(--header-color);
+}
+hr.dashed {
+    width: 100%;
+    margin: 0;
+    border-width: 0;
+    border-top: 2px dashed #333333;
+}
+hr.solid {
+    width: 100%;
+    margin: 0;
+    border-width: 0;
+    border-top: 2px solid #333333;
 }
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 a {
     color: var(--link-color);
