@@ -12,22 +12,54 @@
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js"></script> 
+    <script src="/js/script.js"></script>
     <script>
         function loadFunctions() {
-            loadHTML('/includes/sidebars/sidebar-main.html', 'sidebar-main');
+            loadHTML('/includes/sidebars/sidebar-main.html', 'sidebar');
             loadHTML('/includes/footer.html', 'footer');
         }
     </script>
 </head>
 <body onload="loadFunctions();">
-    <div id="sidebar-main"></div>
+    <div id="sidebar"></div>
     <div class="main-container">
         <main class="main-content">
-            <h1>This is a placeholder! HOMEEE!</h1>
+            <div class="content-header">
+                <h1>
+                    Welcome to akeoot.org!
+                </h1>
+                <hr class="solid">
+                <blockquote>
+                    Developed by Akeoott
+                    <br/><br/>
+                    (Work in progress)
+                </blockquote>
+            </div>
+            <br/>
+            <div>
+                <p>
+                    <h2>Who am i?</h2>
+                    I'm Ame, primarily known as Akeoott.<br/>
+                    (I also go by as akeoot. <a href="/pages/contact/">More here</a>)<br/>
+                    <br/>
+                    I'm a self tought developer enjoying everything around the web and computers!<br/>
+                    I started coding on <u>February 20th, 2025</u>.<br/>
+                    It's been an incredibly fast paced and an exciting journey since then!<br/>
+                    <br/>
+                    My first ever project on GitHub saw its initial commit on <u>April 29th, 2025</u>.<br/>
+                    <a href="https://github.com/Akeoott-Projects/GitHub-Activity-Fetcher">GitHub-Activity-Fetcher</a><br/>
+                    <br/>
+                    My focus right now is on Python.<br/>
+                    Once I feel that I'm good enough, I want to learn C# and frontend in general.<br/>
+                    <br/>
+                </p>
+                <p>
+                    <h2>More comming soon</h2>
+                    Check out the other pages!
+                </p>
+            </div>
             <br/>
             <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500" />
-
         </main>
         <div id="footer"></div>
     </div>

@@ -4,95 +4,120 @@
 
 /* --- Main Style and variables --- */
 :root {
-    /* Background/Colors */
-    --background-color: #0d1117;
-    --background-color-lowop: rgba(13, 17, 23, 0.3);
-    --background-image: url(/images/slanted-gradient.svg);
-    /* Text */
+    /* Colors */
+    --bg-color: #0d1117;
+    --bg-color-low-opacity: rgba(13, 17, 23, 0.3);
     --text-color: #c9d1d9;
     --header-color: #ffffff;
     --note-color: darkgrey;
     --link-color: #58a6ff;
+    --link-color-bright: #8AC0FF;
+    --border-color: #333333;
+
+    /* Typography */
+    --font-family: sans-serif;
     --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
+
+    /* Images */
+    --bg-image: url(/images/slanted-gradient.svg);
 }
 
 body {
-    /* Area */
-    min-height: 1500px;
+    /* Layout */
     margin: 0;
-    padding-top: 50px;
+    min-height: 1500px;
     display: flex;
     flex-direction: column;
+
     /* Background */
-    background-image: var(--background-image);
+    background-image: var(--bg-image);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    /* Text*/
+
+    /* Typography */
     color: var(--text-color);
     text-shadow: var(--text-shadow);
-    font-family: sans-serif;
+    font-family: var(--font-family);
 }
 
+/* --- General Content Style --- */
 
-/* --- General Style --- */
-
-/* Container of content */
-.main-container {
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 60%;
-    border: 2px solid #333;
-    background-color: var(--background-color-lowop);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-div.main-container {
-    transition: 0.5s;
-    position: relative;
-    left: 22.5%;
-}
-
-/* Content style */
-.main-content {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    overflow-x: hidden;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-}
-div.content-header {
-    line-height: .5;
-}
-div.content-header blockquote {
-    color: var(--note-color);
-}
-
-/* General */
-h1, h2 {
-    color: var(--header-color);
-}
-hr.dashed {
-    width: 100%;
-    margin: 0;
-    border-width: 0;
-    border-top: 2px dashed #333333;
-}
-hr.solid {
-    width: 100%;
-    margin: 0;
-    border-width: 0;
-    border-top: 2px solid #333333;
-}
-p {
-    font-size: 1.1em;
-}
+/* All links */
 a {
     color: var(--link-color);
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
+}
+
+/* All headings */
+h1,
+h2 {
+    color: var(--header-color);
+}
+
+/* Horizontal rules */
+hr.dashed {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-top: 2px dashed var(--border-color);
+}
+
+hr.solid {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-top: 2px solid var(--border-color);
+}
+
+/* --- Component Specific Styles --- */
+
+/* Main content container */
+.main-container {
+    position: relative;
+    top: 12px;
+    margin-left: 205px;
+    margin-right: 20px;
+    padding: 40px;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    background-color: var(--bg-color-low-opacity);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner content area */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.2;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+/* Content header */
+.content-header {
+    line-height: 0.8;
+}
+
+.content-header blockquote {
+    color: var(--note-color);
+}
+
+/* Lists */
+.list {
+    text-align: center;
+}
+
+ul.list {
+    display: inline-block;
+    text-align: left;
+    list-style-type: circle;
 }

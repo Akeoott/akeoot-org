@@ -2,80 +2,90 @@
     © 2025 Akeoott. All rights reserved.
 */
 
-/* main config*/
-.sidebar-main {
-    width: 175px;
-    z-index: 150;
+/* --- Sidebar Component --- */
+.sidebar {
+    /* Positioning & Sizing */
+    position: fixed;
     top: 12px;
     bottom: 12px;
     left: 10px;
-    border-radius: 20px;
-    position: fixed;
-    text-align: center;
-    align-items: center;
-    overflow-x: hidden;
+    width: 175px;
+    z-index: 150;
+
+    /* Layout */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 15px;
-    transition: 0.5s;
+    overflow-x: hidden;
+
+    /* Appearance */
     border: 2px solid #333;
+    border-radius: 20px;
+    background-color: var(--bg-color-low-opacity);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: var(--background-color-lowop);
 }
 
-/* tag config */
-.sidebar-main nav {
+/* --- Navigation & Content Styles --- */
+.sidebar nav {
     width: 100%;
     text-align: center;
 }
 
-/* tags in <nav> */
-.sidebar-main nav h2 {
-    padding: 8px 8px 8px 15px;
-    display: block;
-    transition: 0.5s;
-    width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: left;
-}
-.sidebar-main nav p {
-    padding: 0px 8px 0px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    transition: 0.5s;
-    width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: left;
-}
-.sidebar-main nav a {
-    padding: 8px 8px 8px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: var(--link-color);
-    display: block;
-    transition: 0.5s;
-    width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: left;
-}
-.sidebar-main nav hr {
+.sidebar hr {
     width: 100%;
     margin: 0;
     height: 2px;
-    border-width: 0;
-    color: #333333;
+    border: none; /* Reset border styles */
     background-color: #333333;
 }
-.sidebar-main nav a:hover {
-    border-radius: 20px;
+
+/* Base styles for sidebar content */
+.sidebar h2,
+.sidebar p,
+.sidebar a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+/* Specific typography & padding */
+.sidebar h2 {
+    padding: 8px 8px 8px 15px;
+}
+
+.sidebar p {
+    padding: 0 8px 0 15px;
+    font-size: 18px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 15px;
+    font-size: 18px;
     color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Link hover effects */
+.sidebar a:hover {
+    color: var(--link-color-bright);
     background-color: rgba(255, 255, 255, 0.1);
     text-decoration: underline;
+}
+
+/* Special opacity effect for navigation */
+#nav-opacity a {
+    transition: opacity 0.5s;
+}
+
+#nav-opacity:hover a {
+    opacity: 0.4;
+}
+
+#nav-opacity a:hover {
+    opacity: 1;
 }
