@@ -3,10 +3,13 @@
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Redirecting...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- Load all js functions dynamically once page loaded -->
     <script type="text/javascript">
         window.onload = function() {
             window.location.href = "/includes/placeholder-page.html";
@@ -14,8 +17,29 @@
     </script>
 </head>
 <body>
-    <main class="main-content">
-        <p>If you are not redirected automatically, follow this <a href="/includes/placeholder-page.html">link to the new page</a>.</p>
-    </main>
+    <div class="main-container">
+        <main class="main-content">
+            <div class="content-header">
+                <h1>
+                    Redirecting...
+                </h1>
+                <hr class="solid">
+                <blockquote>
+                    Developed by Akeoott
+                    <br/><br/>
+                    (Work in progress)
+                </blockquote>
+            </div>
+            <br/>
+            <div>
+                <p>
+                    <h2>If you didn't get redirected:</h2>
+                    Follow this <a href="/includes/placeholder-page.html">link to the new page</a>.
+                </p>
+            </div>
+            <br/>
+            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500" />
+        </main>
+    </div>
 </body>
 </html>
