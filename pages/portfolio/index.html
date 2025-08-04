@@ -7,38 +7,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placeholder</title>
+    <title>Redirecting...</title>
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script type="text/javascript">
-        window.onload = function() {
+    <script>
+        function switchPage() {
             window.location.href = "/includes/placeholder-page.html";
         };
     </script>
 </head>
-<body>
+<body onload="switchPage();">
     <div class="main-container">
         <main class="main-content">
             <div class="content-header">
-                <h1>
-                    Redirecting...
-                </h1>
+                <h1>Redirecting...</h1>
                 <hr class="solid">
                 <blockquote>
                     Developed by Akeoott
-                    <br/><br/>
+                    <br><br>
                     (Work in progress)
                 </blockquote>
             </div>
-            <br/>
-            <div>
-                <p>
-                    <h2>If you didn't get redirected:</h2>
-                    Follow this <a href="/includes/placeholder-page.html">link to the new page</a>.
-                </p>
+            <br>
+            <div class="content">
+                <div>
+                    <h2>If your not redirected</h2>
+                    <p>
+                        <a href="/includes/placeholder-page.html">Click on me!</a><br>
+                    </p>
+                </div>
             </div>
-            <br/>
-            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500" />
+            <br>
+            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
         </main>
     </div>
 </body>

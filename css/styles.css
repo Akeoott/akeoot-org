@@ -41,6 +41,9 @@ body {
     text-shadow: var(--text-shadow);
     font-family: var(--font-family);
 }
+html {
+	scroll-behavior: smooth;
+}
 
 /* --- General Content Style --- */
 
@@ -49,12 +52,9 @@ a {
     color: var(--link-color);
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
-}
-
-blockquote {
-    color: var(--note-color);
 }
 
 /* All headings */
@@ -70,6 +70,7 @@ hr.dashed {
     border: none;
     border-top: 2px dashed var(--border-color);
 }
+
 hr.solid {
     width: 100%;
     margin: 0;
@@ -89,7 +90,7 @@ hr.solid {
     border: 2px solid var(--border-color);
     border-radius: 20px;
     background-color: var(--bg-color-low-opacity);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
 
 /* Inner content area */
@@ -104,17 +105,30 @@ hr.solid {
     word-wrap: break-word;
 }
 
-/* Content header */
+/* Content */
 .content-header {
-    line-height: 0.8;
+    line-height: .8;
+}
+div.content {
+    margin-bottom: 20px;
+}
+div.content div {
+    margin-bottom: 40px;
+}
+
+.content-header blockquote {
+    color: var(--note-color);
 }
 
 /* Lists */
-.list {
+.list ul {
     text-align: center;
-}
-ul.list {
     display: inline-block;
     text-align: left;
     list-style-type: circle;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.list ul ul {
+    list-style-type: disc;
 }

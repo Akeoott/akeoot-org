@@ -3,7 +3,7 @@
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js"></script> 
+    <script src="/js/script.js"></script>
     <script>
         function loadFunctions() {
             loadHTML('/includes/sidebars/sidebar-main.html', 'sidebar');
@@ -25,43 +25,47 @@
     <div class="main-container">
         <main class="main-content">
             <div class="content-header">
-                <h1>
-                    Akeoott's Projects!
-                </h1>
+                <h1>Akeoott's Projects!</h1>
                 <hr class="solid">
                 <blockquote>
                     Developed by Akeoott
-                    <br/><br/>
+                    <br><br>
                     (Work in progress)
                 </blockquote>
             </div>
-            <br/>
-            <div>
-                <p>
+            <br>
+            <div class="content">
+                <div>
                     <h2>akeoot-org</h2>
-                    This is my first ever website managed with cloudflare!<br/>
-                    I've been working on this site for a while,<br/>
-                    at the beginning it looked BAD. Now it looks decent!<br/>
-                    <br/>
-                    I developed it mostly when i was making the docs page for Fern-AI.<br/>
-                    Navigating thru it is appealing to my eyes :)<br/>
-                    <br/>
-               </p>
-                <p>
+                    <p>
+                        This is my first ever website managed with cloudflare!<br>
+                        I've been working on this site for a while,<br>
+                        at the beginning it looked BAD. Now it looks decent!<br>
+                        <br>
+                        I developed it mostly when i was making the docs page for Fern-AI.<br>
+                        Navigating thru it is appealing to my eyes :)<br>
+                        <br>
+                   </p>
+                </div>
+                <div>
                     <h2>Fern-AI</h2>
-                    PLaceholder.<br/>
-                    More to it on my GitHub.<br/>
-                    <br/>
-                </p>
-                <p>
+                     <p>
+                         PLaceholder.<br>
+                         More to it on my GitHub.<br>
+                         <br>
+                     </p>
+                </div>
+                <div>
                     <h2>More comming soon</h2>
-                    Check out the other pages!
-                </p>
+                    <p>
+                        Check out the other pages!
+                    </p>
+                </div>
             </div>
-            <br/>
-            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500" />
+            <br>
+            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+            <div id="footer"></div>
         </main>
-        <div id="footer"></div>
     </div>
 </body>
 </html>

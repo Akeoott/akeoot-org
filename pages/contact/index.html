@@ -3,7 +3,7 @@
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js"></script> 
+    <script src="/js/script.js"></script>
     <script>
         function loadFunctions() {
             loadHTML('/includes/sidebars/sidebar-main.html', 'sidebar');
@@ -25,44 +25,49 @@
     <div class="main-container">
         <main class="main-content">
             <div class="content-header">
-                <h1>
-                    Contact Akeoott!
-                </h1>
+                <h1>Contact Akeoott!</h1>
                 <hr class="solid">
                 <blockquote>
                     Developed by Akeoott
-                    <br/><br/>
+                    <br><br>
                     (Work in progress)
                 </blockquote>
             </div>
-            <br/>
-            <div>
-                <p>
+            <br>
+            <div class="content">
+                <div>
                     <h2>So you wanna contact me?</h2>
-                    No problem! As long as its relevant ill answer.<br>
-                    I'm mostly available at Discord, just message <a href="https://discord.com/users/898223580104519711">akeoot</a>.<br/>
-                    <br/>
-                    All links pointing to me:
-                    <div class="list">
-                        <ul class="list">
+                    <p>
+                        No problem! As long as its relevant ill answer.<br>
+                        I'm mostly available at Discord, just message <a href="https://discord.com/users/898223580104519711">akeoot</a>.<br>
+                        <br>
+                        All links pointing to me:
+                    </p>
+                    <section class="list">
+                        <ul>
                             <li><a href="https://discord.com/users/898223580104519711">Discord</a></li>
                             <li><a href="https://x.com/akeoott">X (twitter)</a></li>
                             <li><a href="https://github.com/Akeoott">GitHub</a></li>
                             <li><a href="https://pypi.org/user/Akeoott/">PyPI</a></li>
                         </ul>
-                    </div>
-                    You can also contact me via my email.<br>
-                    amejanin00@gmail.com<br>
-                    <br>
-                </p>
-                <p>
+                    </section>
+                    <p>
+                        You can also contact me via my email.<br>
+                        amejanin00@gmail.com<br>
+                        <br>
+                    </p>
+                </div>
+                <div>
                     <h2>More comming soon</h2>
-                    Check out the other pages!
-                </p>
+                    <p>
+                        Check out the other pages!
+                    </p>
+                </div>
             </div>
-            <br/>
+            <br>
             <img src="/images/Social_Credit.webp" alt="Social credit meme" width="500">
+            <div id="footer"></div>
         </main>
-        <div id="footer"></div>
     </div>
 </body>
+</html>

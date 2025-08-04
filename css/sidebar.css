@@ -15,7 +15,7 @@
     /* Layout */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     text-align: center;
     gap: 15px;
     overflow-x: hidden;
@@ -25,6 +25,10 @@
     border-radius: 20px;
     background-color: var(--bg-color-low-opacity);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sidebar div{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* --- Navigation & Content Styles --- */
@@ -78,14 +82,14 @@
 }
 
 /* Special opacity effect for navigation */
-#nav-opacity a {
+.nav-opacity a {
     transition: opacity 0.5s;
 }
 
-#nav-opacity:hover a {
+.nav-opacity:hover a {
     opacity: 0.4;
 }
 
-#nav-opacity a:hover {
+.nav-opacity a:hover {
     opacity: 1;
 }
