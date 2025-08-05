@@ -39,7 +39,7 @@
 
 .sidebar hr {
     width: 100%;
-    margin: 0;
+    margin-top: 5px;
     height: 2px;
     border: none; /* Reset border styles */
     background-color: #333333;
@@ -78,6 +78,8 @@
 .sidebar a:hover {
     color: var(--link-color-bright);
     background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    transition: .2s;
     text-decoration: underline;
 }
 
@@ -85,11 +87,9 @@
 .nav-opacity a {
     transition: opacity 0.5s;
 }
-
 .nav-opacity:hover a {
     opacity: 0.4;
 }
-
 .nav-opacity a:hover {
     opacity: 1;
 }

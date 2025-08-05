@@ -63,6 +63,12 @@ h2 {
     color: var(--header-color);
 }
 
+/* Blockquote */
+blockquote {
+    color: var(--note-color);
+    font-size: .9em;
+}
+
 /* Horizontal rules */
 hr.dashed {
     width: 100%;
@@ -115,9 +121,8 @@ div.content {
 div.content div {
     margin-bottom: 40px;
 }
-
-.content-header blockquote {
-    color: var(--note-color);
+div.content div div {
+    margin-bottom: 20px;
 }
 
 /* Lists */
