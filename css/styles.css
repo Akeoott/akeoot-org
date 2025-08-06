@@ -9,7 +9,7 @@
     --bg-color-low-opacity: rgba(13, 17, 23, 0.3);
     --text-color: #c9d1d9;
     --header-color: #ffffff;
-    --note-color: darkgrey;
+    --note-color: rgb(150, 150, 150);
     --link-color: #58a6ff;
     --link-color-bright: #8AC0FF;
     --border-color: #333333;
@@ -84,6 +84,14 @@ hr.solid {
     border-top: 2px solid var(--border-color);
 }
 
+/* To make seperae elements align as if they arent seperated */
+.fill-gap {
+    margin-top: -14px;
+}
+blockquote.fill-gap {
+    margin-top: -18px;
+}
+
 /* --- Component Specific Styles --- */
 
 /* Main content container */
@@ -113,7 +121,13 @@ hr.solid {
 
 /* Content */
 .content-header {
-    line-height: .8;
+    line-height: 1;
+}
+.content-header h1 {
+    margin-bottom: 10px;
+}
+.content-header blockquote {
+    line-height: 1.2em;
 }
 div.content {
     margin-bottom: 20px;
