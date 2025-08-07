@@ -14,14 +14,14 @@
     <!-- Load all js functions dynamically once page loaded -->
     <script src="/js/script.js"></script>
     <script>
-        function loadFunctions() {
-            loadHTML('/includes/sidebars/sidebar-main.html', 'sidebar');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            loadHTML('', 'sidebar-main');
             loadHTML('/includes/footer.html', 'footer');
-        }
+        });
     </script>
 </head>
-<body onload="loadFunctions();">
-    <div id="sidebar"></div>
+<body>
+    <div id="sidebar-main"></div>
     <div class="main-container">
         <main class="main-content">
             <div class="content-header">

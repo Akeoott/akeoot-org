@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Load all js functions dynamically once page loaded -->
     <script>
-        function switchPage() {
+        document.addEventListener('DOMContentLoaded', (event) => {
             window.location.href = "/includes/placeholder-page.html";
-        };
+        });
     </script>
 </head>
-<body onload="switchPage();">
+<body>
     <div class="main-container">
         <main class="main-content">
             <div class="content-header">

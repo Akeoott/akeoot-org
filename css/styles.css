@@ -145,8 +145,10 @@ div.content div div {
     display: inline-block;
     text-align: left;
     list-style-type: circle;
-    line-height: 1.2;
     margin-bottom: 20px;
+}
+.list p {
+    margin-bottom: -10px;
 }
 .list ul ul {
     list-style-type: disc;

@@ -14,14 +14,14 @@
     <!-- Load all js functions dynamically once page loaded -->
     <script src="/js/script.js"></script>
     <script>
-        function loadFunctions() {
-            loadHTML('/includes/sidebars/sidebar-main.html', 'sidebar');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            loadHTML('', 'sidebar-main');
             loadHTML('/includes/footer.html', 'footer');
-        }
+        });
     </script>
 </head>
-<body onload="loadFunctions();">
-    <div id="sidebar"></div>
+<body>
+    <div id="sidebar-main"></div>
     <div class="main-container">
         <main class="main-content">
             <div class="content-header">
@@ -41,7 +41,7 @@
                     </div>
                     <p>
                         I'm Ame, primarily known as Akeoott.<br>
-                        (I also go by as akeoot. <a href="/pages/contact/">More here</a>)<br>
+                        (I also go by as akeoot. <a href="/pages/contact/">Learn more about me here</a>)<br>
                         <br>
                         I'm a self tought developer enjoying everything around the web and computers!<br>
                         I started coding on <u>February 20th, 2025</u>.<br>
