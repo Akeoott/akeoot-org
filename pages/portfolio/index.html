@@ -7,20 +7,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>Template</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
+    <script src="/js/script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            window.location.href = "/includes/placeholder-page.html";
+            loadHTML('', 'sidebar-main');
+            loadHTML('/includes/footer.html', 'footer');
         });
     </script>
 </head>
 <body>
+    <div id="sidebar-main"></div>
     <div class="main-container">
         <main class="main-content">
             <div class="content-header">
-                <h1>Redirecting...</h1>
+                <h1>This is a Template</h1>
                 <hr class="solid">
                 <blockquote>
                     Developed by Akeoott
@@ -31,14 +36,25 @@
             <br>
             <div class="content">
                 <div>
-                    <h2>If your not redirected</h2>
+                    <div class="content-header">
+                        <h2>Placeholder!</h2>
+                    </div>
                     <p>
-                        <a href="/includes/placeholder-page.html">Click on me!</a><br>
+                        I contain future text!<br>
+                    </p>
+                </div>
+                <div>
+                    <div class="content-header">
+                        <h2>More comming soon</h2>
+                    </div>
+                    <p>
+                        Check out the other things or whatever!<br>
                     </p>
                 </div>
             </div>
             <br>
             <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+            <div id="footer"></div>
         </main>
     </div>
 </body>
