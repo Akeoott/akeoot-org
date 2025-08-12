@@ -53,9 +53,15 @@ a {
     color: var(--link-color);
     text-decoration: none;
 }
-
 a:hover {
     text-decoration: underline;
+}
+.a-hidden {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.a-hidden:hover {
+    text-decoration: none;
 }
 
 /* All headings */
