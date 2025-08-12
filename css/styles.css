@@ -19,6 +19,7 @@
     --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
 
     /* Images */
+    --gliter-gif: url(/images/gliter.gif);
     --bg-image: url(/images/slanted-gradient.svg);
 }
 
@@ -84,6 +85,11 @@ hr.solid {
     border-top: 2px solid var(--border-color);
 }
 
+/* Images */
+img {
+    border-radius: 12px;
+}
+
 /* To make seperae elements align as if they arent seperated */
 .fill-gap {
     margin-top: -14px;
@@ -104,6 +110,7 @@ blockquote.fill-gap {
     border: 2px solid var(--border-color);
     border-radius: 20px;
     background-color: var(--bg-color-low-opacity);
+    background-position: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
 }
 
@@ -129,6 +136,7 @@ blockquote.fill-gap {
 .content-header blockquote {
     line-height: 1.2em;
 }
+
 div.content {
     margin-bottom: 20px;
 }
@@ -140,6 +148,21 @@ div.content div div {
 }
 
 /* Lists */
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.socials img {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
 .list ul {
     text-align: center;
     display: inline-block;
