@@ -31,6 +31,54 @@
     margin-right: 5px;
 }
 
+/* Sidebar toggle button (hidden by default) */
+#sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 200;
+    background: var(--bg-color);
+    color: var(--header-color);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#sidebar-toggle:active {
+    background: var(--link-color);
+}
+
+/* Sidebar close button (only visible on mobile when expanded) */
+#sidebar-close {
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 350;
+    background: var(--bg-color);
+    color: var(--header-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#sidebar-close:active {
+    background: var(--link-color);
+}
+
 /* --- Navigation & Content Styles --- */
 .sidebar nav {
     width: 100%;
@@ -92,4 +140,51 @@
 }
 .nav-opacity a:hover {
     opacity: 1;
+}
+
+
+@media (max-width: 900px) {
+    .sidebar.sidebar-expanded #sidebar-close {
+        display: flex;
+    }
+}
+
+/* --- Responsive Sidebar --- */
+@media (max-width: 900px) {
+    .sidebar {
+        left: -180px;
+        /* Hide sidebar by default on mobile */
+        width: 0;
+        min-width: 0;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        pointer-events: none;
+        opacity: 0;
+        transition: left 0.3s, width 0.3s, background-color 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+    .sidebar.sidebar-expanded {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        min-width: 0;
+        border-radius: 0;
+        border: none;
+        background-color: rgba(13, 17, 23, 0.97);
+        box-shadow: 0 0 0 100vw rgba(0,0,0,0.7);
+        opacity: 1;
+        pointer-events: auto;
+        z-index: 300;
+        transition: left 0.3s, width 0.3s, background-color 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+    #sidebar-toggle {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        margin-left: 0 !important;
+    }
 }

@@ -116,7 +116,7 @@ blockquote.fill-gap {
     top: 12px;
     margin-bottom: 24px;
     margin-left: 180px;
-    margin-right: 20px;
+    margin-right: 12px;
     padding: 40px;
     border: 2px solid var(--border-color);
     border-radius: 20px;
@@ -187,13 +187,12 @@ section.content article {
     list-style-type: disc;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
+@media (max-width: 900px) {
     .main-container {
-        margin: 0;
-        border-radius: 0;
+        margin: 0%;
+        margin-bottom: 22px;
+    }
+    .main-content {
+        padding: 0%;
     }
 }
