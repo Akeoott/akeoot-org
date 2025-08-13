@@ -7,50 +7,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>akeoot.org - Home</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             loadHTML('', 'sidebar-main');
             loadHTML('/includes/footer.html', 'footer');
         });
     </script>
 </head>
 <body>
-    <div id="sidebar-main"></div>
+    <aside id="sidebar-main"></aside>
     <div class="main-container">
         <main class="main-content">
-            <div class="content-header">
+            <header class="content-header">
                 <h1>Welcome to akeoot.org!</h1>
                 <hr class="solid">
-                <blockquote>
-                    Developed by Akeoott
-                    <br>
-                    (Work in progress)
-                </blockquote>
-            </div>
-            <img src="/images/cat-smiling.jpg" alt="Cat Smiling" width="100">
-            <br>
-            <div class="content">
-                <div>
-                    <div class="content-header">
+                <blockquote>Developed by Akeoott<br>(Work in progress)</blockquote>
+            </header>
+
+            <figure>
+                <img src="/images/cat-smiling.jpg" alt="Cat Smiling" width="100">
+            </figure>
+
+            <section class="content">
+                <article>
+                    <header class="content-header">
                         <h2>Who am i?</h2>
-                    </div>
+                    </header>
                     <p>
                         I'm Ame, primarily known as Akeoott.<br>
                         (I also go by as akeoot. <a href="/pages/contact/">Learn more about me here</a>)<br>
-                        <br>
-                        I'm a self tought developer born in <u>2009</u>.<br>
+                    </p>
+                    <p>
+                        I'm a self tought developer born in <time datetime="2009">2009</time>.<br>
                         I'm enjoying everything around the web and computers!<br>
-                        I started coding on <u>February 20th, 2025</u>.<br>
+                        I started coding on <time datetime="2025-02-20">February 20th, 2025</time>.<br>
                         It's been an incredibly fast paced and an exciting journey since then!<br>
-                        My first ever project on GitHub saw its initial commit on <u>April 29th, 2025</u>.<br>
-                        <a href="https://github.com/Akeoott-Projects/GitHub-Activity-Fetcher">GitHub-Activity-Fetcher</a><br>
-                        <br>
+                        My first ever project on GitHub saw its initial commit on <time datetime="2025-04-29">April 29th, 2025</time>.<br>
+                        <a href="https://github.com/Akeoott-Projects/GitHub-Activity-Fetcher">
+                            GitHub-Activity-Fetcher
+                        </a>
+                    </p>
+                    <p>
                         My focus right now is coding in Python and frontend in general (html, css, js etc.)<br>
                         Going full-stack BABY!<br>
                         Once I feel that I have a well formed foundation overall,<br>
@@ -61,24 +64,29 @@
                         <br>
                         It's basically my dream.
                     </blockquote>
-                </div>
-                <div>
-                    <div class="content-header">
+                </article>
+
+                <article>
+                    <header class="content-header">
                         <h2>What is this website?</h2>
-                    </div>
+                    </header>
                     <p>
-                        This website is basically an about me.<br>
-                        It contains my portfolio, blogs, projects and how to contact me.<br>
-                        <br>
-                        Once upon a time I wanted to buy a domain.<br>
-                        So did, and from then on I started building this site on cloudflare.<br>
-                        And that without any frontend knowledge beforehand!<br>
+                        This website is basically an "about me".<br>
+                        It contains my portfolio, blogs, projects and contact info.<br>
                     </p>
-                </div>
-            </div>
-            <br>
-            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
-            <div id="footer"></div>
+                    <p>
+                        Once upon a time I wanted to buy a domain.<br>
+                        So did, and from then on I started building this site on cloudflare<br>
+                        without any frontend knowledge beforehand!<br>
+                    </p>
+                </article>
+            </section>
+
+            <figure>
+                <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+            </figure>
+
+            <footer id="footer"></footer>
         </main>
     </div>
 </body>

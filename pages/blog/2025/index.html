@@ -7,66 +7,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akeoott's Blogs - 2025</title>
+    <title>akeoot.org - 2025 Blogs</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             loadHTML('', 'sidebar-2025');
             loadHTML('/includes/footer.html', 'footer');
         });
     </script>
 </head>
 <body>
-    <div id="sidebar-2025"></div>
-    <div class="main-container" id="top">
+    <aside id="sidebar-2025"></aside>
+    <div class="main-container">
         <main class="main-content">
-            <div class="content-header">
-                <h1>Akeoott's Blogs - 2025</h1>
+            <header class="content-header">
+                <h1>Akeoott's 2025 Blogs</h1>
                 <hr class="solid">
-                <blockquote>
-                    Developed by Akeoott
-                    <br>
-                    (Work in progress)
-                </blockquote>
-            </div>
-            <br>
-            <div class="content">
-                <div>
-                    <div class="content-header">
+                <blockquote>Developed by Akeoott<br>(Work in progress)</blockquote>
+            </header>
+
+            <figure>
+                <img src="/images/cat-smiling.jpg" alt="Cat Smiling" width="100">
+            </figure>
+
+            <section class="content">
+                <article>
+                    <header class="content-header">
                         <h2>What is this?</h2>
-                    </div>
+                    </header>
                     <p>
-                        Here come all my blogs for 2025.<br>
-                        Starting on August 12th, 2025! I will now post stuff here.<br>
+                        Here come all my blogs for <time datetime="2025">2025</time>.<br>
+                        Starting on <time datetime="2025-8-12">August 12th, 2025</time>! I will now post stuff here.<br>
                     </p>
-                </div>
-                <div>
-                    <div class="content-header">
+                </article>
+
+                <article>
+                    <header class="content-header">
                         <h2>More comming soon</h2>
-                    </div>
+                    </header>
                     <p>
-                        Check out the other things or whatever!<br>
+                        More comming soon! Check out other things or whatever.
                     </p>
-                </div>
-                <br>
-                <div id="p-12-08-25">
-                    <div class="content-header">
+                </article>
+
+                <article id="p-12-08-25">
+                    <header class="content-header">
                         <h2>Added Blogs To akeoot.org!</h2>
-                        <h2>12.08.25</h2>
-                    </div>
+                        <h2><time datetime="2025-08-25">12.08.25</time></h2>
+                    </header>
                     <p>
                         I added blogs to my website so I can finally start recording what i have achived or learned!<br>
                         If anything interesting happens, ill be sure to post it here.<br>
                     </p>
-                </div>
-            </div>
-            <br>
-            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
-            <div id="footer"></div>
+                </article>
+            </section>
+
+            <figure>
+                <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+            </figure>
+
+            <footer id="footer"></footer>
         </main>
     </div>
 </body>

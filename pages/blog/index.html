@@ -7,51 +7,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akeoott's Blogs</title>
+    <title>akeoot.org - Blogs</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             loadHTML('', 'sidebar-main');
             loadHTML('/includes/footer.html', 'footer');
         });
     </script>
 </head>
 <body>
-    <div id="sidebar-main"></div>
+    <aside id="sidebar-main"></aside>
     <div class="main-container">
         <main class="main-content">
-            <div class="content-header">
-                <h1>Akeoott's Blogs</h1>
+            <header class="content-header">
+                <h1>Welcome to akeoot.org!</h1>
                 <hr class="solid">
-                <blockquote>
-                    Developed by Akeoott
-                    <br>
-                    (Work in progress)
-                </blockquote>
-            </div>
-            <br>
-            <div class="content">
-                <div>
-                    <div class="content-header">
+                <blockquote>Developed by Akeoott<br>(Work in progress)</blockquote>
+            </header>
+
+            <figure>
+                <img src="/images/cat-smiling.jpg" alt="Cat Smiling" width="100">
+            </figure>
+
+            <section class="content">
+                <article>
+                    <header class="content-header">
                         <h2><a href="/pages/blog/2025/">Akeoott's Blogs - 2025</a></h2>
-                    </div>
-                </div>
-                <div>
-                    <div class="content-header">
+                    </header>
+                </article>
+
+                <article>
+                    <header class="content-header">
                         <h2><a class="a-hidden" href="/pages/blog/nothing/">Nothing else here...</a></h2>
-                    </div>
+                    </header>
                     <p>
                         Check out the other things or whatever!<br>
                     </p>
-                </div>
-            </div>
-            <br>
-            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
-            <div id="footer"></div>
+                </article>
+            </section>
+
+            <figure>
+                <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+            </figure>
+
+            <footer id="footer"></footer>
         </main>
     </div>
 </body>

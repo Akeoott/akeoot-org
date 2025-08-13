@@ -7,42 +7,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Akeoott</title>
+    <title>akeoot.org - Contact</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/sidebar.css">
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             loadHTML('', 'sidebar-main');
             loadHTML('/includes/footer.html', 'footer');
         });
     </script>
 </head>
 <body>
-    <div id="sidebar-main"></div>
+    <aside id="sidebar-main"></aside>
     <div class="main-container">
         <main class="main-content">
-            <div class="content-header">
-                <h1>Contact Akeoott!</h1>
+            <header class="content-header">
+                <h1>Contact Akeoott</h1>
                 <hr class="solid">
-                <blockquote>
-                    Developed by Akeoott
-                    <br>
-                    (Work in progress)
-                </blockquote>
-            </div>
-            <br>
-            <div class="content">
-                <div>
-                    <div class="content-header">
+                <blockquote>Developed by Akeoott<br>(Work in progress)</blockquote>
+            </header>
+
+            <section class="content">
+                <article>
+                    <header class="content-header">
                         <h2>So you wanna contact me?</h2>
-                    </div>
+                    </header>
                     <p>
                         No problem! As long as its relevant ill answer.<br>
                         I'm mostly available on Discord, just message <a href="https://discord.com/users/898223580104519711">akeoot</a>.<br>
-                        <br>
+                    </p>
+                    <p class="margin-bottom-auto">
                         <b>Primary platforms pointing to me:</b>
                     </p>
                     <div class="socials">
@@ -79,19 +76,23 @@
                         You can also contact me via my email.<br>
                         amejanin00@gmail.com<br>
                     </p>
-                </div>
-                <div>
-                    <div class="content-header">
+                </article>
+
+                <article>
+                    <header class="content-header">
                         <h2>More comming soon</h2>
-                    </div>
+                    </header>
                     <p>
                         Check out the other pages!
                     </p>
-                </div>
-            </div>
-            <br>
-            <img src="/images/Social_Credit.webp" alt="Social credit meme" width="500">
-            <div id="footer"></div>
+                </article>
+            </section>
+
+            <figure>
+                <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+            </figure>
+
+            <footer id="footer"></footer>
         </main>
     </div>
 </body>

@@ -7,11 +7,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+    <title>akeoot.org - Redirecting...</title>
     <link rel="stylesheet" href="/css/styles.css">
     <!-- Load all js functions dynamically once page loaded -->
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('DOMContentLoaded', () => {
             window.location.href = "/includes/placeholder-page.html";
         });
     </script>
@@ -19,28 +19,26 @@
 <body>
     <div class="main-container">
         <main class="main-content">
-            <div class="content-header">
+            <header class="content-header">
                 <h1>Redirecting...</h1>
                 <hr class="solid">
-                <blockquote>
-                    Developed by Akeoott
-                    <br>
-                    (Work in progress)
-                </blockquote>
-            </div>
-            <br>
-            <div class="content">
-                <div>
-                    <div class="content-header">
-                        <h2>If your not redirected</h2>
-                    </div>
+                <blockquote>Developed by Akeoott<br>(Work in progress)</blockquote>
+            </header>
+
+            <section class="content">
+                <article>
+                    <header class="content-header">
+                        <h2>Redirecting</h2>
+                    </header>
                     <p>
-                        <a href="/includes/placeholder-page.html">Click on me!</a><br>
+                        If your not getting redirected, <a href="/includes/placeholder-page.html">click on me</a>!
                     </p>
-                </div>
-            </div>
-            <br>
-            <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+                </article>
+            </section>
+
+            <figure>
+                <img src="/images/playing-snow-snow.gif" alt="Image of a cat in snow." width="500">
+            </figure>
         </main>
     </div>
 </body>
