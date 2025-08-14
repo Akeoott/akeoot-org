@@ -4,18 +4,26 @@
 
 /* --- Main Style and variables --- */
 :root {
-    /* Colors */
+    /* Primary Colors */
     --bg-color: #0d1117;
-    --bg-color-low-opacity: rgba(13, 17, 23, 0.3);
-    --text-color: #c9d1d9;
-    --header-color: #ffffff;
-    --note-color: rgb(150, 150, 150);
-    --link-color: #58a6ff;
-    --link-color-bright: #8AC0FF;
-    --border-color: #333333;
+    --bg-color-low-opacity: rgba(13, 17, 23, .4);
 
+    /* Sidebar Colors */
+    --bg-color-sidebar: rgba(13, 17, 23, 0.95);
+    --bg-color-hover-nav: rgba(110, 110, 110, 0.1);
+    --bg-color-hover-link-off: rgba(75, 75, 75, 0.1);
+    --bg-color-hover-link-on: rgba(255, 255, 255, 0.1);
+
+    /* Elements */
+    --border-color: #333333;
+    --box-shadow: rgba(0, 0, 0, 1);
+    
     /* Typography */
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --text-color: #c9d1d9;
+    --header-color: #ffffff;
+    --link-color: #58a6ff;
+    --blockquote-color: rgb(150, 150, 150);
     --text-shadow: 1px 2px 2px rgba(0, 0, 0, 1);
 
     /* Images */
@@ -76,7 +84,7 @@ p.margin-bottom-auto {
 
 /* Blockquote */
 blockquote {
-    color: var(--note-color);
+    color: var(--blockquote-color);
     font-size: .9em;
 }
 
@@ -124,7 +132,7 @@ blockquote.fill-gap {
     border-radius: 20px;
     background-color: var(--bg-color-low-opacity);
     background-position: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 8px var(--box-shadow);
 }
 
 /* Inner content area */
@@ -159,7 +167,7 @@ section.content article {
     margin-bottom: 20px;
 }
 
-/* Lists and Tables */
+/* --- Lists and Tables --- */
 table {
   border-collapse: collapse;
   border: 2px solid var(--border-color);
@@ -184,6 +192,52 @@ tfoot th {
 }
 tfoot td {
   font-weight: bold;
+}
+
+/* Pretty navigation for blogs */
+.link-nav nav {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: center;
+    overflow-x: hidden;
+}
+.link-nav a {
+    padding: 8px 8px 8px 14px;
+    font-size: 1.4em;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.link-nav nav {
+    background-color: var(--bg-color-hover-nav);
+    border-radius: 18px;
+    transition: .2s;
+}
+
+/* Hover effects */
+.link-nav a:hover {
+    color: var(--link-color);
+    background-color: var(--bg-color-hover-link-on);
+    border-radius: 18px;
+    transition: .2s;
+    text-decoration: underline;
+}
+.link-nav nav:hover {
+    background-color: var(--bg-color-hover-link-off);
+    border-radius: 18px;
+    transition: .2s;
+}
+
+/* Special opacity effect for navigation */
+.nav-opacity a {
+    transition: opacity 0.5s;
+}
+.nav-opacity:hover a {
+    opacity: 0.4;
+}
+.nav-opacity a:hover {
+    opacity: 1;
 }
 
 .socials {

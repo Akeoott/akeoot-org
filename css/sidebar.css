@@ -9,7 +9,7 @@
     top: 12px;
     bottom: 12px;
     left: 10px;
-    width: 150px;
+    width: 155px;
     z-index: 150;
 
     /* Layout */
@@ -21,10 +21,10 @@
     overflow-x: hidden;
 
     /* Appearance */
-    border: 2px solid #333;
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     background-color: var(--bg-color-low-opacity);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--box-shadow);
 }
 .sidebar div{
     margin-left: 5px;
@@ -45,7 +45,7 @@
     width: 44px;
     height: 44px;
     font-size: 2em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px var(--box-shadow);
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -69,7 +69,7 @@
     width: 40px;
     height: 40px;
     font-size: 2em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px var(--box-shadow);
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -90,7 +90,7 @@
     margin-top: 5px;
     height: 2px;
     border: none; /* Reset border styles */
-    background-color: #333333;
+    background-color: var(--bg-color);
 }
 
 /* Base styles for sidebar content */
@@ -107,39 +107,39 @@
 
 /* Specific typography & padding */
 .sidebar h2 {
-    padding: 8px 8px 8px 15px;
+    padding: 8px 8px 8px 14px;
 }
 
 .sidebar p {
-    padding: 0 8px 0 15px;
+    padding: 0 8px 0 14px;
     font-size: 18px;
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 15px;
+    padding: 8px 8px 8px 14px;
     font-size: 18px;
     color: var(--link-color);
     text-decoration: none;
 }
 
-/* Link hover effects */
+.sidebar nav {
+    background-color: var(--bg-color-hover-nav);
+    border-radius: 18px;
+    transition: .2s;
+}
+
+/* Hover effects */
 .sidebar a:hover {
-    color: var(--link-color-bright);
-    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--link-color);
+    background-color: var(--bg-color-hover-link-on);
     border-radius: 18px;
     transition: .2s;
     text-decoration: underline;
 }
-
-/* Special opacity effect for navigation */
-.nav-opacity a {
-    transition: opacity 0.5s;
-}
-.nav-opacity:hover a {
-    opacity: 0.4;
-}
-.nav-opacity a:hover {
-    opacity: 1;
+.sidebar nav:hover {
+    background-color: var(--bg-color-hover-link-off);
+    border-radius: 18px;
+    transition: .2s;
 }
 
 
@@ -172,8 +172,7 @@
         min-width: 0;
         border-radius: 0;
         border: none;
-        background-color: rgba(13, 17, 23, 0.95);
-        box-shadow: 0 0 0 100vw rgba(0,0,0,0.7);
+        background-color: var(--bg-color-sidebar);
         opacity: 1;
         pointer-events: auto;
         z-index: 300;
