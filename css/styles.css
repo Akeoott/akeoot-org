@@ -100,6 +100,8 @@ img {
     border-radius: 12px;
 }
 
+/* --- Helper classes --- */
+
 /* To make seperae elements align as if they arent seperated */
 .fill-gap {
     margin-top: -14px;
@@ -149,14 +151,41 @@ blockquote.fill-gap {
 }
 
 section.content {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 section.content article {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-/* Lists */
+/* Lists and Tables */
+table {
+  border-collapse: collapse;
+  border: 2px solid var(--border-color);
+}
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+thead,
+tfoot,
+tbody {
+  background-color: var(--bg-color);
+}
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 8px 10px;
+}
+tfoot th {
+  text-align: center;
+}
+tfoot td {
+  font-weight: bold;
+}
+
 .socials {
     display: flex;
     justify-content: center;

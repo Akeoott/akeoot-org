@@ -36,7 +36,7 @@
     display: none;
     position: fixed;
     top: 18px;
-    left: 18px;
+    right: 16px;
     z-index: 200;
     background: var(--bg-color);
     color: var(--header-color);
@@ -59,7 +59,7 @@
 #sidebar-close {
     display: none;
     position: absolute;
-    top: 16px;
+    top: 18px;
     right: 16px;
     z-index: 350;
     background: var(--bg-color);
@@ -161,6 +161,7 @@
         box-shadow: none;
         pointer-events: none;
         opacity: 0;
+        font-size: 1.5em;
         transition: left 0.3s, width 0.3s, background-color 0.3s, border-radius 0.3s, opacity 0.3s;
     }
     .sidebar.sidebar-expanded {
@@ -171,7 +172,7 @@
         min-width: 0;
         border-radius: 0;
         border: none;
-        background-color: rgba(13, 17, 23, 0.97);
+        background-color: rgba(13, 17, 23, 0.95);
         box-shadow: 0 0 0 100vw rgba(0,0,0,0.7);
         opacity: 1;
         pointer-events: auto;
