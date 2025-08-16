@@ -127,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Portfolio logic
     const page = new PortfolioPage();
     page.init();
+
     // Only one <details> open at a time in .info-details
     const infoDetails = document.querySelector('.info-details');
     if (infoDetails) {
@@ -137,7 +138,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         }, true);
+
+        // Smooth expand/collapse for details
+        const detailsEls = infoDetails.querySelectorAll('details');
+            detailsEls.forEach(details => {
+                details.style.maxHeight = '';
+                details.style.overflow = 'hidden';
+                const summary = details.querySelector('summary');
+                const summaryHeight = summary ? summary.offsetHeight + 100 : 48;
+                details.addEventListener('toggle', function(e) {
+                    if (details.open) {
+                        details.style.transition = 'none';
+                        details.style.maxHeight = summaryHeight + 'px';
+                        void details.offsetHeight;
+                        details.style.transition = 'max-height 0.35s cubic-bezier(.4,0,.2,1)';
+                        const fullHeight = details.scrollHeight;
+                        details.style.maxHeight = fullHeight + 'px';
+                    } else {
+                        details.style.transition = 'max-height 0.35s cubic-bezier(.4,0,.2,1)';
+                        details.style.maxHeight = details.scrollHeight + 'px';
+                        void details.offsetHeight;
+                        details.style.maxHeight = summaryHeight + 'px';
+                    }
+                });
+                details.addEventListener('transitionend', function(e) {
+                    if (details.open && e.propertyName === 'max-height') {
+                        details.style.maxHeight = 'none';
+                    }
+                });
+            });
     }
+
     // Dark mode switch
     const switchBtn = document.getElementById('dark-switch');
     if (switchBtn) {
