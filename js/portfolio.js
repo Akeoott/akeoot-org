@@ -1,3 +1,7 @@
+/* 
+    © 2025 Akeoott. All rights reserved.
+*/
+
 class PortfolioPage {
     constructor() {
         this.skills = [
@@ -20,7 +24,7 @@ class PortfolioPage {
                 title: 'Fern-AI (WIP)',
                 desc: 'An LLM/MLM made for general purpouse tasks using agents.',
                 tags: ['AI', 'Python', 'Automation', 'Agents'],
-                link: 'https://github.com/Akeoott-Fern-AI/Fern-AI',
+                link: 'https://github.com/Akeoott-Fern-AI/',
             },
         ];
     }
