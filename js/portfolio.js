@@ -208,8 +208,16 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             setGliter(false);
         }
-    }    
+    }
     // Back button
+    const backBtn = document.getElementById('back-btn');
+    if (backBtn) {
+        backBtn.addEventListener('click', () => {
+            window.location.href = '/pages/';
+        });
+    }
+    /* Back button */
+    /*
     const backBtn = document.getElementById('back-btn');
     if (backBtn) {
         backBtn.addEventListener('click', () => {
@@ -220,4 +228,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    */
 });
