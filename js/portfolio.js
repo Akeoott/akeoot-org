@@ -21,10 +21,10 @@ class PortfolioPage {
                 link: 'https://github.com/Akeoott',
             },
             {
-                title: 'Fern-AI (WIP)',
-                desc: 'An LLM/MLM made for general purpouse tasks using agents.',
-                tags: ['AI', 'Python', 'Automation', 'Agents'],
-                link: 'https://github.com/Akeoott-Fern-AI/',
+                title: 'Something else?',
+                desc: 'Having a hard time to code and find motivation. I wanna rewrite this website but I just cant.',
+                tags: ['Collab', 'Team Up', 'Rewrite', 'Help Out'],
+                link: 'https://discord.com/users/898223580104519711',
             },
         ];
     }
