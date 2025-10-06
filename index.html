@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ame's &amp; Bio - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/js/script.js" defer></script>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
@@ -183,10 +184,7 @@
                     <a href="https://www.tiktok.com/@akeoot" class="social-badge" alt="TikTok: akeoot">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="https://x.com/akeoott" class="social-badge" alt="Twitter: @akeoott">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://pypi.org/user/Akeoott/" class="social-badge" alt="PyPI: Akeoott">
+                    <a href="https://stats.fm/user/akeoot" class="social-badge" alt="StatsFM: Akeoot">
                         <i class="fa-solid fa-chart-simple"></i>
                     </a>
                 </div>
@@ -204,28 +202,6 @@
             </p>
         </div>
     </footer>
-
-    <script>
-        // Collapsible section functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const coll = document.querySelectorAll('.collapsible');
-
-            coll.forEach(item => {
-                item.addEventListener('click', function () {
-                    this.classList.toggle('active');
-                    const content = this.nextElementSibling;
-
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        content.style.padding = '0 1.2rem';
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        content.style.padding = '1.2rem';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
