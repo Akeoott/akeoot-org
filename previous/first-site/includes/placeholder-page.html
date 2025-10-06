@@ -4,62 +4,57 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0d1117">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-
-    <title>akeoot.org - Blog</title>
-    <meta name="author" content="Ame Janin, Akeoot">
-    <meta name="description" content="Akeoott's BlogsPage (outdated)">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/sidebar.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <title>akeoot.org - Placeholder</title>
+    <link rel="stylesheet" href="/previous/first-site/css/styles.css">
+    <link rel="stylesheet" href="/previous/first-site/css/sidebar.css">
+    <link rel="stylesheet" href="/previous/first-site/css/footer.css">
     <!-- Load all js functions dynamically once page loaded -->
-    <script src="/js/script.js" defer></script>
+    <script src="/previous/first-site/js/script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             loadHTML('', 'sidebar-main');
-            loadHTML('/includes/footer.html', 'footer');
+            loadHTML('/previous/first-site/includes/footer.html', 'footer');
         });
     </script>
 </head>
+
 <body>
     <button id="sidebar-toggle" type="button" aria-label="Open sidebar" title="Open sidebar">☰</button>
     <aside id="sidebar-main"></aside>
     <div class="main-container">
         <main class="main-content">
             <header class="content-header">
-                <h1>View my blogs!</h1>
+                <h1>Welcome to akeoot.org!</h1>
                 <hr class="solid">
                 <blockquote>Developed by Akeoott<br>(Work in progress)</blockquote>
             </header>
 
-            <figure>
-                <img src="/images/cat-smiling.jpg" alt="Cat Smiling" width="100">
-            </figure>
-
             <section class="content">
                 <article>
                     <header class="content-header">
-                        <h2>All Blogs Seperated By Year:</h2>
-                    </header>
-                    <div class="link-nav">
-                        <nav class="nav-opacity">
-                            <a href="/pages/blog/2025/">Akeoott's Blogs - <time datetime="2025">2025</time></a>
-                        </nav>
-                    </div>
-                </article>
-                <hr class="dashed">
-                <article>
-                    <header class="content-header">
-                        <h2><a class="a-hidden" href="/pages/blog/nothing/">Nothing else here...</a></h2>
+                        <h2>This is a placeholder</h2>
                     </header>
                     <p>
-                        Check out the other things or whatever!<br>
+                        Explore the other pages on my website!
+                    </p>
+                </article>
+
+                <article>
+                    <header class="content-header">
+                        <h2>What is this website?</h2>
+                    </header>
+                    <p>
+                        This website is basically an "about me".<br>
+                        It contains my portfolio, blogs, projects and contact info.<br>
+                    </p>
+                    <p>
+                        Once upon a time I wanted to buy a domain.<br>
+                        So did, and from then on I started building this site on cloudflare<br>
+                        without any frontend knowledge beforehand!<br>
                     </p>
                 </article>
             </section>
@@ -72,4 +67,5 @@
         </main>
     </div>
 </body>
+
 </html>

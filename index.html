@@ -1,208 +1,231 @@
-<!--
-    © 2025 Akeoott. All rights reserved.
--->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0d1117">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-
-    <title>akeoot.org - Portfolio</title>
-    <meta name="author" content="Ame Janin, Akeoot">
-    <meta name="keywords" content="Portfolio, GitHub, Ame, Akeoot, Akeoott, Developer, Programmer, Python, JavaScript, Linux, Open Source, Frontend, Web Development, Projects, Coding, Software Engineer, Creator, Automation, UI/UX, C#, HTML, CSS, Personal Website, Tech Stack, Digital Resume, Creative, Innovation, Technology, Gamer, FOSS, Open Source Contributor, Full Stack, VS Code, PyPI, Steam, osu!, Tiktok, Socials, Contact, Resume, Skills, Tools">
-    <meta name="description" content="Akeoott's personal portfolio and homepage. Discover Ame's projects, skills, open source contributions, tech stack, and contact information. Developer, creator, and Linux enthusiast passionate about coding, automation, and building innovative solutions.">
-    <link rel="stylesheet" href="/css/portfolio.css">
-    <script src="/js/portfolio.js" defer></script>
+    <title>Ame's &amp; Bio - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-    <div id="gliter-overlay" style="display:none;"></div>
-    <div class="main-container">
-        <nav class="top-bar-container">
-            <div class="top-bar">
-                <button class="top-button" id="back-btn" aria-label="Go back" type="button">
-                    <span class="top-button-icon" aria-hidden="true">&#8592;</span> Back
-                </button>
-            </div>
-            <div class="top-bar reverse">
-                <button class="top-button reverse" id="dark-switch" aria-label="Toggle dark mode" type="button">
-                    <span class="top-button-icon reverse" aria-hidden="true">🌙</span><span class="switch-label">Dark</span>
-                </button>
-                <button class="top-button reverse" id="gliter-switch" aria-label="Toggle gliter effect" type="button" title="Toggle gliter effect">
-                    <span class="top-button-icon reverse" aria-hidden="true">✨</span><span class="switch-label">Gliter</span>
-                </button>
-            </div>
-        </nav>
-        <main class="main-content">
-            <header class="content-header">
-                <img src="/images/logo/Akeoott-pfp.jpeg" alt="Akeoott avatar" class="avatar">
+    <header>
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-img">
+                    <img src="./images/death_accomplished_PINK.jpg" alt="Ame's pfp">
+                </div>
                 <h1>Ame</h1>
-                <blockquote class="tagline">(Akeoott)</blockquote>
-                <div class="tagline">Developer • Gamer • Creator</div>
-                <div class="socials">
-                    <a href="https://github.com/Akeoott" target="_blank" title="GitHub">
-                        <img 
-                            src="/images/logo/github-mark.svg" 
-                            alt="GitHub" 
-                            id="about-github-logo-img"
-                            data-dark="/images/logo/github-mark-white.svg"
-                            data-light="/images/logo/github-mark.svg"
-                        >
+                <p class="tagline">
+                    (Akeoot/Akeoott)<br>Backend Developer &amp; Linux Enthusiast
+                </p>
+                <p>
+                    Building systems that actually work (most of the time)
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="card">
+                <p>
+                    Hello! I'm Ame (also known as Akeoot on socials and Akeoott on coding platforms).
+                    I'm a self-taught backend developer who started this journey on February 20th, 2025.
+                    I'm passionate about creating efficient systems and learning new technologies.
+                </p>
+                <p>
+                    I'm kinda proficient in Python, decent with web technologies,
+                    and currently diving deep into C# with great progress.
+                    When I'm not coding, you'll find me customizing my Arch Linux setup, playing rhythm games,
+                    or listening to music 24/7.
+                </p>
+                <div class="divider"></div>
+                <p>
+                    I absolutely love cats, hate sleeping (who needs it anyway?),
+                    and have an undying passion for music, especially Vocaloid, speedcore, breakcore, and heavy metal.
+                    Everything Japanese music-related has my heart!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests">
+        <div class="container">
+            <h2>My Interests</h2>
+            <div class="interests-container">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Linux Systems</h3>
+                    <p>
+                        Arch Linux enthusiast &amp; customization addict
+                    </p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C# &amp; OOP</h3>
+                    <p>
+                        Object-oriented programming and C# development
+                    </p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music</h3>
+                    <p>
+                        Vocaloid, speedcore, breakcore &amp; heavy metal
+                    </p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Rhythm Games</h3>
+                    <p>
+                        Gaming and piano (still learning both!)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fun-facts">
+        <div class="container">
+            <h2>My Journey &amp; Goals</h2>
+            <button type="button" class="collapsible">My Coding Journey</button>
+            <div class="content">
+                <div class="card">
+                    <p>
+                        I started learning to code on February 20th, 2025 and made my first GitHub commit on April 29th,
+                        2025 with GitHub-Activity-Fetcher. As someone with Asperger's and an IQ of 121,
+                        I have a unique ability to absorb massive amounts of information when
+                        I'm passionate about something.
+                    </p>
+                    <p>
+                        My brain thrives on complexity and patterns, which makes backend development and system
+                        architecture particularly fascinating to me. I learn quickly and love tackling challenging
+                        problems.
+                    </p>
+                </div>
+            </div>
+
+            <button type="button" class="collapsible">My Tech Stack &amp; Preferences</button>
+            <div class="content">
+                <div class="card">
+                    <p>
+                        • Primary Language: Python (kinda proficient, dont expect much tho)
+                    </p>
+                    <p>
+                        • Learning: C# (making great progress!)
+                    </p>
+                    <p>
+                        • OS: Arch Linux (daily driver)
+                    </p>
+                    <p>
+                        • Paradigm: Object-Oriented Programming (must)
+                    </p>
+                    <p>
+                        • Web: HTML/CSS/JavaScript (decent)
+                    </p>
+                    <p>
+                        • Music: Always playing while coding
+                    </p>
+                </div>
+            </div>
+
+            <button type="button" class="collapsible">My Aspirations</button>
+            <div class="content">
+                <div class="card">
+                    <p>
+                        My primary goal is to become so skilled in C# that I can contribute meaningfully to osu!lazer.
+                        I'm fascinated by complex backend systems and want to build scalable, efficient applications.
+                    </p>
+                    <p>
+                        Long-term, I aim to work on challenging backend projects that push my limits
+                        while maintaining my passion for open-source contributions and Linux system development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Let's Connect!</h2>
+            <div class="card">
+                <p>
+                    Love backend development and complex systems as much as I do? Let's build something amazing
+                    together!
+                </p>
+                <p>
+                    Feel free to reach out for collaborations or just to chat about coding, Linux, or music:
+                </p>
+                <p>
+                    Email: amejanin00@gmail.com
+                </p>
+                <div class="social-badges">
+                    <a href="https://discord.com/users/898223580104519711" class="social-badge" alt="Discord: akeoot">
+                        <i class="fab fa-discord"></i>
                     </a>
-                    <a href="https://discord.com/users/898223580104519711" target="_blank" title="Discord"><img src="/images/logo/discord.jpeg" alt="Discord (akeoot)"></a>
-                    <a href="https://twitter.com/akeoott" target="_blank" title="Twitter"><img src="/images/logo/twitter-x-logo.png" alt="Twitter"></a>
-                    <a href="mailto:amejanin00@gmail.com" title="Email"><img src="/images/logo/gmail-logo.webp" alt="Email"></a>
+                    <a href="https://steamcommunity.com/id/Akeoot/" class="social-badge" alt="Steam: akeoot">
+                        <i class="fab fa-steam"></i>
+                    </a>
+                    <a href="https://github.com/Akeoott" class="social-badge" alt="GitHub: Akeoott">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@akeoot" class="social-badge" alt="TikTok: akeoot">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://x.com/akeoott" class="social-badge" alt="Twitter: @akeoott">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://pypi.org/user/Akeoott/" class="social-badge" alt="PyPI: Akeoott">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </a>
                 </div>
-            </header>
-            <section class="about" id="about">
-                <h2>About Me</h2>
-                <p>
-                    I'm Ame, primarily known as Akeoot (or Akeoott in development). I'm a self-taught developer born in <time datetime="2009">2009</time>.<br>
-                    I love linux, open source, automation, and building things that help others (and myself). I enjoy learning new technologies, customizing Linux, and collaborating.
-                </p>
-                <p>
-                    Email: <a href="mailto:amejanin00@gmail.com">amejanin00@gmail.com</a>
-                </p>
-                <div class="skills" id="skills-list">
-                    <!-- Skills will be rendered here by JS -->
-                </div>
-            </section>
-            <section class="projects" id="projects">
-                <!-- Project cards will be rendered here by JS -->
-            </section>
-            <section class="info-details" id="info-details">
-                <details open>
-                    <summary>More About Me</summary>
-                    <div>
-                        <p>
-                            I'm Ame, primarily known as Akeoot.<br>
-                            I also go by as Akeoott on the developement side.<br>
-                        </p>
-                        <p>
-                            I'm a self tought developer born in <time datetime="2009">2009</time>.<br>
-                            I'm enjoying everything around the web and computers!<br>
-                            I started coding on <time datetime="2025-02-20">February 20th, 2025</time>.<br>
-                            It's been an incredibly fast paced and an exciting journey since then!<br>
-                            My first ever project on GitHub saw its initial commit on <time datetime="2025-04-29">April 29th, 2025</time>.<br>
-                            <a href="https://github.com/Akeoott-Projects/GitHub-Activity-Fetcher">
-                                GitHub-Activity-Fetcher
-                            </a>
-                        </p>
-                        <p>
-                            My focus right now is coding in Python and frontend in general (html, css, js etc.)<br>
-                            Going full-stack BABY!<br>
-                            Once I feel that I have a well formed foundation overall,<br>
-                            I want to learn C# so I can work on larger faster programs.<br>
-                        </p>
-                        <blockquote>
-                            And hopefully contibute to <a href="https://github.com/ppy/osu">osu!lazer</a>'s developement.
-                            <br>
-                            It's basically my dream.
-                        </blockquote>
-                    </div>
-                </details>
-                <details>
-                    <summary>Contact &amp; Socials</summary>
-                    <br>
-                    <div>
-                        <div class="socials left">
-                            <a href="https://github.com/Akeoott" target="_blank" title="GitHub">
-                                <img 
-                                    src="/images/logo/github-mark.svg" 
-                                    alt="GitHub" 
-                                    id="social-github-logo-img"
-                                    data-dark="/images/logo/github-mark-white.svg"
-                                    data-light="/images/logo/github-mark.svg"
-                                >
-                            </a>
-                            <a href="https://discord.com/users/898223580104519711" target="_blank" title="Discord"><img src="/images/logo/discord.jpeg" alt="Discord (akeoot)"></a>
-                            <a href="https://pypi.org/user/Akeoott/" target="_blank" title="PyPI"><img src="/images/logo/python-logo.jpeg" alt="PyPI"></a>
-                            <a href="https://twitter.com/akeoott" target="_blank" title="Twitter"><img src="/images/logo/twitter-x-logo.png" alt="Twitter"></a>
-                        </div>
-                        <div class="socials left">
-                            <a href="https://steamcommunity.com/id/Akeoot" target="_blank" title="Steam"><img src="/images/logo/steam-logo.png" alt="Steam"></a>
-                            <a class="rotate" href="https://osu.ppy.sh/users/36050791" target="_blank" title="osu!"><img src="/images/logo/Osu!_Logo_2016.svg.png" alt="osu!"></a>
-                            <a href="https://stats.fm/akeoot" target="_blank" title="stats.fm"><img src="/images/logo/stats-fm.png" alt="stats.fm"></a>
-                            <a href="https://www.tiktok.com/@akeoot" target="_blank" title="Tiktok"><img src="/images/logo/tiktok-logo.webp" alt="Tiktok"></a>
-                        </div>
-                        <p class="center-txt">
-                            Email: <a href="mailto:amejanin00@gmail.com">amejanin00@gmail.com</a>
-                        </p>
-                    </div>
-                </details>
-                <details>
-                    <summary>Whats Up With My Names?</summary>
-                    <div>
-                        <p>
-                            Quite similar but actually different.<br>
-                            Both names belong to the same person, but why two names?<br>
-                            Cause of some issue i had with github when starting out.<br>
-                            So I've split them into two:<br>
-                        </p>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Akeoot</th>
-                                    <th scope="col">Akeoott</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Is not associated with coding.</th>
-                                    <th scope="row">Is associated with coding.</th>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Is my social and gaming identity.</th>
-                                    <th scope="row">Is my developer identity.</th>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Used when refering to me privately.</th>
-                                    <th scope="row">Used for credits about coding.</th>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th scope="row" colspan="2">Basically, Akeoot and Akeoott are me, Ame!</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
-                </details>
-                <details>
-                    <summary>Tech Stack &amp; Tools</summary>
-                    <div>
-                        <ul>
-                            <li>Languages: Python, C# (Still learning), Shell, JavaScript (Eww), HTML, CSS and whatever...</li>
-                            <li>Tools: Git, VS Code, Linux, nano ❤︎, cd, ls, etc... the usual yk 😝</li>
-                            <li>Design: Figma, SVG, UI/UX prototyping.</li>
-                            <li>Still growing...</li>
-                        </ul>
-                    </div>
-                </details>
-                <details>
-                    <summary>Fun Facts</summary>
-                    <div>
-                        <ul>
-                            <li>I use Arch Linux as my main OS.</li>
-                            <li>I love cats and coding.</li>
-                            <li>I automate everything I can.</li>
-                            <li>I enjoy customizing my workflow and tools.</li>
-                            <li>I hate the sun...<br><blockquote>This includes sleeping :3</blockquote></li>
-                        </ul>
-                        <figure class="img-width">
-                            <img src="/images/playing-snow-snow.gif" alt="Cat in snow">
-                        </figure>
-                    </div>
-                </details>
-            </section>
-        </main>
-        <footer>
-            &copy; 2025 Akeoott. All rights reserved.<blockquote>Ame is the same person as Akeoott or Akeoot</blockquote>
-        </footer>
-    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>
+                Made with <span class="heart">♥</span> by Ame | 2025
+            </p>
+            <p>
+                All code and chaos preserved
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Collapsible section functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const coll = document.querySelectorAll('.collapsible');
+
+            coll.forEach(item => {
+                item.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        content.style.padding = '0 1.2rem';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.style.padding = '1.2rem';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

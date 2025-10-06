@@ -8,7 +8,7 @@ console.info(
 )
 
 const {
-  pathname: PATHNAME
+    pathname: PATHNAME
 } = window.location
 
 console.info(`Current Location ${PATHNAME}`)
@@ -18,14 +18,14 @@ const sidebar = "sidebar"
 
 function loadHTML(initialPath, elementId) {
     console.info(`Attempting to load ${elementId}`)
-    
+
     let finalPath = initialPath;
 
     if (elementId.includes(sidebar)) {
         console.debug(`Picking ${elementId}`)
-        finalPath = `/includes/sidebars/${elementId}.html`;
+        finalPath = `/previous/first-site/includes/sidebars/${elementId}.html`;
     }
-    
+
     loadHTMLpage(finalPath, elementId)
 }
 

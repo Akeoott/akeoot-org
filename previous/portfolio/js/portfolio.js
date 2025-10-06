@@ -1,11 +1,11 @@
-/* 
+/*
     © 2025 Akeoott. All rights reserved.
 */
 
 class PortfolioPage {
     constructor() {
         this.skills = [
-            'Python', 'C#','Git', 'Linux', 'Shell', 'UI/UX', 'APIs', 'Open Source', 'SVG', 'JavaScript', 'HTML5', 'CSS3',
+            'Python', 'C#', 'Git', 'Linux', 'Shell', 'UI/UX', 'APIs', 'Open Source', 'SVG', 'JavaScript', 'HTML5', 'CSS3',
         ];
         this.projects = [
             {
@@ -141,32 +141,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Smooth expand/collapse for details
         const detailsEls = infoDetails.querySelectorAll('details');
-            detailsEls.forEach(details => {
-                details.style.maxHeight = '';
-                details.style.overflow = 'hidden';
-                const summary = details.querySelector('summary');
-                const summaryHeight = summary ? summary.offsetHeight + 100 : 48;
-                details.addEventListener('toggle', function(e) {
-                    if (details.open) {
-                        details.style.transition = 'none';
-                        details.style.maxHeight = summaryHeight + 'px';
-                        void details.offsetHeight;
-                        details.style.transition = 'max-height 0.35s cubic-bezier(.4,0,.2,1)';
-                        const fullHeight = details.scrollHeight;
-                        details.style.maxHeight = fullHeight + 'px';
-                    } else {
-                        details.style.transition = 'max-height 0.35s cubic-bezier(.4,0,.2,1)';
-                        details.style.maxHeight = details.scrollHeight + 'px';
-                        void details.offsetHeight;
-                        details.style.maxHeight = summaryHeight + 'px';
-                    }
-                });
-                details.addEventListener('transitionend', function(e) {
-                    if (details.open && e.propertyName === 'max-height') {
-                        details.style.maxHeight = 'none';
-                    }
-                });
+        detailsEls.forEach(details => {
+            details.style.maxHeight = '';
+            details.style.overflow = 'hidden';
+            const summary = details.querySelector('summary');
+            const summaryHeight = summary ? summary.offsetHeight + 100 : 48;
+            details.addEventListener('toggle', function (e) {
+                if (details.open) {
+                    details.style.transition = 'none';
+                    details.style.maxHeight = summaryHeight + 'px';
+                    void details.offsetHeight;
+                    details.style.transition = 'max-height 0.35s cubic-bezier(.4,0,.2,1)';
+                    const fullHeight = details.scrollHeight;
+                    details.style.maxHeight = fullHeight + 'px';
+                } else {
+                    details.style.transition = 'max-height 0.35s cubic-bezier(.4,0,.2,1)';
+                    details.style.maxHeight = details.scrollHeight + 'px';
+                    void details.offsetHeight;
+                    details.style.maxHeight = summaryHeight + 'px';
+                }
             });
+            details.addEventListener('transitionend', function (e) {
+                if (details.open && e.propertyName === 'max-height') {
+                    details.style.maxHeight = 'none';
+                }
+            });
+        });
     }
 
     // Dark mode switch
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('back-btn');
     if (backBtn) {
         backBtn.addEventListener('click', () => {
-            window.location.href = '/pages/';
+            window.location.href = '/previous/portfolio/pages/';
         });
     }
     /* Back button */
