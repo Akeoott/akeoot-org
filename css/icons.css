@@ -30,16 +30,3 @@
     opacity: 1;
     transform: scale(1.2);
 }
-
-.foot-emblem {
-    margin: .5rem;
-}
-
-.foot-emblem img {
-    width: 50px;
-    transition: transform .8s ease;
-}
-
-.foot-emblem img:hover {
-    transform: scale(1.2);
-}
