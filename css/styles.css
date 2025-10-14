@@ -1,3 +1,7 @@
+@import url(/css/specific.css);
+@import url(/css/icons.css);
+@import url(/css/media.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +30,7 @@ body::-webkit-scrollbar {
 
 header {
     background: linear-gradient(to right, var(--black), var(--dark-gray));
-    padding: 3rem 0;
+    padding: 0;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -102,7 +106,12 @@ h1 {
 .tagline {
     font-size: 1.2rem;
     color: var(--pink);
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
+}
+
+.sub-tagline {
+    font-size: 1rem;
+    opacity: .8;
 }
 
 h2 {
@@ -261,7 +270,7 @@ footer {
     background-color: var(--dark-gray);
     color: var(--pink);
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 0 .2rem;
     border-top: 1px solid var(--pink);
 }
 
@@ -303,31 +312,5 @@ footer {
 
     to {
         opacity: 1;
-    }
-}
-
-.divider {
-    height: 3px;
-    background: linear-gradient(to right, transparent, var(--pink), transparent);
-    margin: 2rem 0;
-}
-
-@media (max-width: 768px) {
-    .interests-container {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .profile-img img {
-        width: 120px;
-        height: 120px;
-        font-size: 2.5rem;
     }
 }

@@ -4,11 +4,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     coll.forEach(item => {
         item.addEventListener('click', function () {
+            // Close all other collapsible sections
+            coll.forEach(otherItem => {
+                if (otherItem !== this && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    const otherContent = otherItem.nextElementSibling;
+
+                    // Update aria-expanded attribute
+                    otherItem.setAttribute('aria-expanded', 'false');
+
+                    // Collapse other sections
+                    otherContent.style.maxHeight = null;
+                    otherContent.style.padding = '0 1.2rem';
+                }
+            });
+
+            // Toggle the clicked section
             this.classList.toggle('active');
             const content = this.nextElementSibling;
 
             // Update aria-expanded attribute based on active state
-            item.setAttribute('aria-expanded', item.classList.contains('active'));
+            this.setAttribute('aria-expanded', this.classList.contains('active'));
 
             if (content.style.maxHeight) {
                 // Collapsing

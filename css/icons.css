@@ -1,0 +1,45 @@
+.page-emblem {
+    display: flex;
+    justify-content: left;
+    margin-top: .5rem;
+    margin-left: -1rem;
+    position: relative;
+    width: min-content;
+}
+
+.page-emblem img {
+    width: 75px;
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.emblem-default {
+    opacity: 1;
+}
+
+.emblem-hover {
+    position: absolute;
+    opacity: 0;
+}
+
+.page-emblem:hover .emblem-default {
+    opacity: 0;
+    transform: scale(1);
+}
+
+.page-emblem:hover .emblem-hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.foot-emblem {
+    margin: .5rem;
+}
+
+.foot-emblem img {
+    width: 50px;
+    transition: transform .8s ease;
+}
+
+.foot-emblem img:hover {
+    transform: scale(1.2);
+}
