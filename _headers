@@ -1,0 +1,3 @@
+# Rule to prevent indexing on all Cloudflare Pages subdomains (*.pages.dev)
+Host: *.pages.dev
+X-Robots-Tag: noindex, nofollo
