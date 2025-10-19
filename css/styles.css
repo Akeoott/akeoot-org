@@ -28,6 +28,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+a {
+    color: var(--pink);
+}
+
 header {
     background: linear-gradient(to right, var(--black), var(--dark-gray));
     padding: 0;
