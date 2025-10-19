@@ -36,14 +36,12 @@ header::before {
 }
 
 .profile-img img {
-    /* Removed redundant properties that were in the Critical CSS in <head> */
     background: linear-gradient(45deg, var(--pink), var(--dark-pink));
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
     color: var(--black);
-    /* Animation remains here as it is non-critical eye-candy */
     animation: float 3s ease-in-out infinite;
 }
 
