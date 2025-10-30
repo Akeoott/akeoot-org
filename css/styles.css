@@ -173,6 +173,20 @@ section {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
+.content {
+    padding: 0;
+    margin-bottom: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.dropdown-card {
+    background: var(--light-gray);
+    border-radius: 0 0 15px 15px;
+    padding: 1rem 2rem 1.5rem 2rem;
+}
+
 .interests-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -210,8 +224,8 @@ section {
     outline: none;
     font-size: 1.1rem;
     font-weight: 600;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, border-radius 0.2s ease;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -231,15 +245,6 @@ section {
 
 .active:after {
     transform: rotate(45deg);
-}
-
-.content {
-    padding: 0 1.2rem;
-    margin-bottom: 1rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease;
-    border-radius: 0 0 10px 10px;
 }
 
 .social-badges {
