@@ -16,7 +16,7 @@
     background: linear-gradient(45deg, var(--pink), var(--dark-pink));
     color: var(--black);
     text-decoration: none;
-    transition: transform 0.5s ease;
+    transition: transform .2s ease-out;
     display: inline-block;
 }
 
@@ -50,7 +50,7 @@
 
     /* Fade in tooltip */
     opacity: 0;
-    transition: opacity .4s ease;
+    transition: opacity .2s ease-in-out;
 }
 
 /* Tooltip arrow */

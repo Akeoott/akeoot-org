@@ -165,7 +165,7 @@ section {
     margin-bottom: 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     border-left: 4px solid var(--pink);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 .card:hover {
@@ -178,7 +178,7 @@ section {
     margin-bottom: 1rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .dropdown-card {
@@ -198,7 +198,7 @@ section {
     border-radius: 15px;
     padding: 1.5rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-out;
     border: 1px solid transparent;
 }
 
@@ -225,7 +225,7 @@ section {
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 15px;
-    transition: background-color 0.3s ease, border-radius 0.2s ease;
+    transition: background-color 0.3s ease-out, border-radius 0.2s ease-out;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -240,7 +240,7 @@ section {
     color: var(--pink);
     font-weight: bold;
     font-size: 1.5rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-out;
 }
 
 .active:after {
@@ -265,7 +265,7 @@ section {
     color: var(--black);
     border-radius: 50%;
     font-size: 1.8rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-out;
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -285,7 +285,7 @@ footer {
 
 .heart {
     color: var(--pink);
-    animation: heartbeat 1.5s ease infinite;
+    animation: heartbeat 1.5s ease-out infinite;
 }
 
 @keyframes heartbeat {
