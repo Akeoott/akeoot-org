@@ -1,9 +1,6 @@
 # akeoot.org
 
-### This is my own personal website!
+### This is my own personal (Non-Professional) website!
 
----
-
-So i recently bought myself a domain, im just gonna do stuff in here that i wanna do.<br>Nothing specific happening here!
-
----
+I bought myself a domain XP<br>
+Currently, my bio is being hosted there but in the future, other things might get hosted there as well.
