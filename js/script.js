@@ -3,7 +3,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const coll = document.querySelectorAll('.collapsible');
-    const date = new Date();
 
     coll.forEach(item => {
         item.addEventListener('click', function () {
@@ -50,6 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    document.getElementById("footer-date")
-        .appendChild(document.createTextNode(date.getFullYear()));
+    document.getElementById("current-year")
+        .appendChild(document.createTextNode(new Date().getFullYear()));
 });
