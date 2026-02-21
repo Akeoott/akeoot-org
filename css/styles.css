@@ -161,6 +161,12 @@ section {
     background-color: var(--black);
 }
 
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--pink), transparent);
+    margin: 2rem 0;
+}
+
 .card {
     background: var(--light-gray);
     border-radius: 15px;
