@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  /* Highlighted Text, Elements */
+  --color-primary: rgb(255, 205, 225);
+  --color-primary-dark: rgb(208, 168, 184);
+
+  /* Backgrounds, Elements*/
+  --color-bg-900: #121212;
+  --color-bg-800: #1a1a1a;
+  --color-bg-700: #2a2a2a;
+
+  /* Normal Text */
+  --color-text: #ffffff;
+}
+
+@layer base {
+  a {
+    @apply text-primary underline;
+  }
+
+  a:hover {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply relative max-w-300 mx-auto py-0;
+  }
+}
