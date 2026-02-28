@@ -1,0 +1,38 @@
+@theme {
+  /* Highlighted Text, Elements */
+  --color-primary: rgb(255, 205, 225);
+  --color-primary-dark: rgb(208, 168, 184);
+  --color-primary-darker: rgb(255, 141, 186);
+  --gradient-primary: linear-gradient(to right, var(--color-primary), var(--color-primary-darker));
+
+  /* Backgrounds, Elements*/
+  --color-bg-900: #121212;
+  --color-bg-800: #1a1a1a;
+  --color-bg-700: #2a2a2a;
+
+  /* Normal Text */
+  --color-text: #ffffff;
+
+  /* Shadows */
+  --text-shadow-primary: 0 0 10px rgba(245, 198, 203, 0.3);
+  --shadow-element-primary: 0 0 20px rgba(245, 198, 203, 0.3);
+  --shadow-element-secondary: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --shadow-element-secondary-hover: 0 8px 25px rgba(0, 0, 0, 0.4);
+
+  /* Animations */
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}

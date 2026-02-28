@@ -1,10 +1,8 @@
 <template>
-    <div class="text-text">
-        <main>
-            <slot />
-        </main>
-        <CompFooter />
-    </div>
+    <main>
+        <slot />
+    </main>
+    <CompFooter />
 </template>
 
 <script lang="ts">

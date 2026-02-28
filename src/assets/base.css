@@ -1,0 +1,49 @@
+@layer base {
+  body {
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  header {
+    background: linear-gradient(to right, var(--black), var(--dark-gray));
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:
+      radial-gradient(circle at 20% 50%, var(--color-primary) 0%, transparent 20%),
+      radial-gradient(circle at 80% 20%, var(--color-primary-darker) 0%, transparent 20%);
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  a {
+    @apply text-primary underline;
+    @apply hover:text-white;
+  }
+
+  h1 {
+    @apply mb-2 text-[2.8rem] font-bold text-shadow-primary;
+  }
+
+  h2 {
+    @apply relative inline-block mb-6 text-[1.8rem] font-bold text-primary;
+  }
+
+  h2::after {
+    @apply content-[''] absolute w-[50%] h-0.75 left-0 -bottom-1.25 bg-primary rounded-[3px];
+  }
+
+  h3 {
+    @apply pb-3 font-bold;
+  }
+}
