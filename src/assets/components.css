@@ -61,18 +61,18 @@
     @apply border-none outline-none rounded-[15px];
     @apply bg-bg-700 cursor-pointer;
     @apply hover:bg-[#333];
-    transition: background-color 0.5s ease-out, border-radius 0.2s ease-out;
+    transition: background-color 0.4s ease-in-out, border-radius 0.2s ease-in-out;
   }
 
   .collapsible:after {
     @apply text-primary text-[1.5rem] font-bold;
     content: '\002B';
-    transition: transform 0.5s ease-out;
+    transition: transform 0.4s ease-in-out;
   }
 
   .content {
     @apply mb-4 max-h-0 overflow-hidden;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
   }
 
   .dropdown-card {
