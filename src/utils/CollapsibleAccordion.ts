@@ -16,7 +16,7 @@ export class CollapsibleAccordion {
     constructor(options: AccordionOptions = {}) {
         this.options = {
             selector: options.selector ?? '.collapsible',
-            closeDelay: options.closeDelay ?? 250,
+            closeDelay: options.closeDelay ?? 450,
             openDelay: options.openDelay ?? 125,
             allowMultipleOpen: options.allowMultipleOpen ?? false
         };
