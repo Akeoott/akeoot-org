@@ -1,4 +1,3 @@
-// idk where to put this TypeScript code ;-;
 type AccordionItem = HTMLElement;
 type AccordionContent = HTMLElement;
 
@@ -23,6 +22,7 @@ export class CollapsibleAccordion {
         };
 
         this.init();
+        this.addResizeListener();
     }
 
     private init(): void {
@@ -104,7 +104,7 @@ export class CollapsibleAccordion {
 
         content.style.maxHeight = `${content.scrollHeight}px`;
 
-        content.getBoundingClientRect();
+        content.getBoundingClientRect(); // force reflow
 
         content.style.maxHeight = '0px';
 
@@ -119,5 +119,21 @@ export class CollapsibleAccordion {
         const el = item.nextElementSibling;
         if (!el || !(el instanceof HTMLElement)) return null;
         return el;
+    }
+
+    private addResizeListener(): void {
+        window.addEventListener('resize', () => {
+            this.items.forEach(item => {
+                if (!item.classList.contains('active')) return;
+                const content = this.getContent(item);
+                if (!content) return;
+
+                const prevTransition = content.style.transition;
+                content.style.transition = 'none';
+                content.style.maxHeight = `${content.scrollHeight}px`;
+                content.getBoundingClientRect();
+                content.style.transition = prevTransition;
+            });
+        });
     }
 }

@@ -73,7 +73,7 @@
                 My Coding Journey
             </button>
             <article class="content">
-                <div class="dropdown-card">
+                <div class="dropdown-card flex flex-col">
                     <p>
                         I started learning to code in early <time datetime="2025">2025</time>
                         and made my first GitHub commit on <time datetime="4-29">April 29th</time>.
@@ -82,6 +82,7 @@
                         which is why backend development is so interesting to me.
                         I'm a quick learner and I'm always looking for the next thing to understand.
                     </p>
+                    <img class="mt-5 w-full h-62.5 rounded-[15px]" src="/images/kitty-cat.webp" decoding="async" loading="lazy" alt="fuh">
                 </div>
             </article>
 
