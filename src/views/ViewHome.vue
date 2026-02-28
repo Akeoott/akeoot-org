@@ -91,13 +91,32 @@
             </button>
             <article class="content">
                 <div class="dropdown-card">
-                    <p>
-                        • Main Programming Language: I use C# and am comfortable building things with it.<br>
-                        • Learning Now: Frontend frameworks, containers, databases.<br>
-                        • Web Stuff: I know my way around Vue, Tailwind, TypeScript.<br>
-                        • Operating System: I use Arch Linux everyday, used to be windows only user XP.<br>
-                        • Languages: I'm German, but fluent in English.
+                    <ul class="list-[circle] pl-6 space-y-1">
+                        <li>
+                            <span class="font-bold">Programming Lang:</span>
+                            I use C# and am comfortable building things with it.
+                        </li>
+                        <li>
+                            <span class="font-bold">Learning Now:</span>
+                            Frontend frameworks, containers, databases.
+                        </li>
+                        <li>
+                            <span class="font-bold"> Web Stuff:</span>
+                            I know my way around Vue, Tailwind, TypeScript.
+                        </li>
+                        <li>
+                            <span class="font-bold">Operating System:</span>
+                            I use Arch Linux everyday, used to be windows only user XP.
+                        </li>
+                        <li>
+                            <span class="font-bold">Languages:</span>
+                            I'm German, but fluent in English.
+                        </li>
+                    </ul>
+                    <p class="pt-4">
+                        I know my way around most things!
                     </p>
+                    <figure id="skillicons" class="pt-1 grid grid-cols-[repeat(auto-fill,minmax(50px,1fr))]"></figure>
                 </div>
             </article>
 
@@ -147,6 +166,7 @@
 <script lang="ts">
 import InterestCard from '@/components/CompInterestCard.vue';
 import { CollapsibleAccordion } from '@/utils/CollapsibleAccordion';
+import { SkillIcons } from '@/utils/SkillIcons';
 import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
@@ -157,6 +177,7 @@ export default defineComponent({
     setup() {
         onMounted(() => {
             new CollapsibleAccordion({ allowMultipleOpen: false });
+            new SkillIcons("skillicons").load();
         });
     }
 })
