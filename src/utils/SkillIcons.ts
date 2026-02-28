@@ -19,10 +19,12 @@ export class SkillIcons {
 
         this.skills.forEach(skill => {
             const img: HTMLImageElement = document.createElement("img");
-            img.className = "p-[2px]"
-            img.src = `https://skillicons.dev/icons?i=${skill}`;
+            img.className = "p-[2px]";
+            img.src = `/images/skillicons/${skill}.svg`;
+            img.alt = `${skill} icon`;
             img.decoding = "async";
             img.loading = "lazy";
+
             this.container!.appendChild(img);
         });
     }
