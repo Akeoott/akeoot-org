@@ -76,7 +76,7 @@
   }
 
   .dropdown-card {
-    @apply px-8 pt-4 pb-6 bg-bg-700 rounded-[0_0_15px_15px];
+    @apply px-8 pt-4 pb-7 bg-bg-700 rounded-[0_0_15px_15px];
   }
 
   .active:after {

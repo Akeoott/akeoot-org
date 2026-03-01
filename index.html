@@ -5,26 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ame's Bio</title>
-    <!-- metadata -->
     <meta name="author" content="Ame, Akeoot">
     <meta name="description" content="Learn about Ame! Ame's personal bio and description. This is not a portfolio.">
     <meta name="theme-color" content="#ffcde1">
-    <!-- open graph-->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://akeoot.org/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ame",
+      "url": "https://akeoot.org",
+      "jobTitle": "Backend Developer",
+      "sameAs": ["https://github.com/Akeoott"],
+      "knowsAbout": ["C#", "Linux", "Backend Development"]
+    }
+    </script>
+    <!-- Open Graph -->
     <meta property="og:site_name" content="akeoot.org">
     <meta property="og:title" content="Ame's Bio">
     <meta property="og:description" content="Learn about Ame! Ame's personal bio and description. This is not a portfolio.">
     <meta property="og:image" content="https://akeoot.org/images/death_accomplished_PINK.webp">
     <meta property="og:url" content="https://akeoot.org/">
     <meta property="og:type" content="website">
-    <!-- favicon -->
-    <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <meta property="og:locale" content="en_US">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <!-- files -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    <style>
+        html {
+            background-color: #121212;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,10 +55,3 @@
 </body>
 
 </html>
-
-<style>
-    /* Prevent white flash XP */
-    html {
-        background-color: #121212;
-    }
-</style>
