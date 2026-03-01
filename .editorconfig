@@ -1,0 +1,67 @@
+root = true
+
+# ================
+# General Settings
+
+[*]
+# Core settings
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+
+# Default Indentation
+indent_style = space
+indent_size = 4
+
+# ====================
+# Web Styling Settings
+
+[*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,vue}]
+indent_size = 4
+[*.{css,scss,sass,less,styl}]
+indent_size = 2
+
+# ==============================
+# C# (.NET SDK) Styling Settings
+
+[*.cs]
+# File Header
+file_header_template = SPDX-FileCopyrightText: 2026 Ame (Akeoot/Akeoott) <akeoot@pm.me>\nSPDX-License-Identifier: LicenseRef-Proprietary\n\nAll rights reserved.
+dotnet_diagnostic.IDE0073.severity = error
+
+# using
+dotnet_separate_import_directive_groups = true
+csharp_style_using_directive_placement = outside_namespace:suggestion
+csharp_style_namespace_declaration = file_scoped:suggestion
+
+# Code Block
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_preserve_single_line_blocks = true
+
+insert_final_newline = true
+
+# xml based files
+[*.{xml,axaml,slnx,csproj}]
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+
+# =======================
+# Python Styling Settings
+
+[*.py]
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+
+# =======================
+# Markdown and Text Files
+
+[*.{md,txt}]
+trim_trailing_whitespace = true
+insert_final_newline = false

@@ -1,0 +1,85 @@
+.container {
+  @apply max-w-300 mx-auto px-6 py-0;
+}
+
+@layer components {
+  .profile-img img {
+    @apply flex w-37.5 h-37.5 text-bg-900 bg-primary border-primary border-4 rounded-full;
+    @apply shadow-element-primary animate-float;
+  }
+
+  .card {
+    @apply p-8 bg-bg-700 rounded-[15px] border-primary border-l-4;
+  }
+
+  .interest-icon {
+    @apply mb-4 text-[2.5rem] text-primary
+  }
+
+  .interest-element h3 {
+    @apply font-bold
+  }
+
+  .gradient {
+    background: var(--gradient-primary);
+    @apply bg-clip-text text-transparent;
+  }
+
+  .gradient-divider {
+    @apply my-8 h-0.75 bg-linear-to-r from-transparent via-primary to-transparent;
+  }
+}
+
+/* hover */
+@layer components {
+  .hover-border {
+    @apply border border-transparent transition-all ease-out duration-500;
+    @apply hover:border-primary;
+  }
+
+  .hover-grow {
+    @apply transition-all ease-out duration-500;
+    @apply hover:transform-[scale(1.05)];
+  }
+
+  .hover-up {
+    @apply transition-all ease-out duration-500;
+    @apply hover:transform-[translateY(-4px)];
+  }
+
+  .hover-shadow {
+    @apply shadow-element-secondary;
+    @apply hover:shadow-element-secondary-hover;
+  }
+}
+
+/* collapsible element */
+@layer components {
+  .collapsible {
+    @apply flex justify-between items-center p-4 w-full;
+    @apply text-primary text-left text-[1.1rem] font-semibold;
+    @apply border-none outline-none rounded-[15px];
+    @apply bg-bg-700 cursor-pointer;
+    @apply hover:bg-[#333];
+    transition: background-color 0.4s ease-in-out, border-radius 0.2s ease-in-out;
+  }
+
+  .collapsible:after {
+    @apply text-primary text-[1.5rem] font-bold;
+    content: '\002B';
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .content {
+    @apply mb-4 max-h-0 overflow-hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  }
+
+  .dropdown-card {
+    @apply px-8 pt-4 pb-6 bg-bg-700 rounded-[0_0_15px_15px];
+  }
+
+  .active:after {
+    @apply transform-[rotate(45deg)];
+  }
+}

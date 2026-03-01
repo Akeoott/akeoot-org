@@ -1,6 +1,3 @@
-<!--- Copyright (c) Ame (Akeoott) <ame@akeoot.org>. Licensed under the GPL-3.0 License. --->
-<!--- See the LICENSE file in the repository root for full license text. --->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ame's Bio</title>
     <!-- metadata -->
-    <meta name="theme-color" content="#ffcde1">
     <meta name="author" content="Ame, Akeoot">
     <meta name="description" content="Learn about Ame! Ame's personal bio and description. This is not a portfolio.">
+    <meta name="theme-color" content="#ffcde1">
     <!-- open graph-->
     <meta property="og:site_name" content="akeoot.org">
     <meta property="og:title" content="Ame's Bio">
@@ -21,201 +18,29 @@
     <meta property="og:type" content="website">
     <!-- favicon -->
     <link rel="icon" href="/images/favicon/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
     <!-- files -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <main>
-        <header>
-            <div class="container">
-                <div class="profile-container">
-                    <div class="profile-img">
-                        <img src="/images/death_accomplished_PINK.webp" alt="Ame's profile picture">
-                    </div>
-                    <h1>Ame</h1>
-                    <p class="tagline">
-                        (Akeoot/Akeoott)<br>Backend Developer &amp; Linux Enthusiast<br>
-                        <span class="sub-tagline">
-                            This page is my bio. This ain't a portfolio.<br>
-                            Don't treat this like a professional page.
-                        </span>
-                    </p>
-                </div>
-            </div>
-        </header>
+    <div id="page-loader">
+        <div class="loader"></div>
+    </div>
 
-        <section class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <article class="card">
-                    <p>
-                        Hello! I'm Ame, a self-taught backend developer from Germany.
-                        I started my coding journey on <time datetime="2025-2-20">February 20th, 2025</time>,
-                        and I've been fully immersed in it ever since.
-                        I love building systems, testing new technologies and learning how things work under the hood.
-                    </p>
-                    <div class="divider"></div>
-                    <p>
-                        When I'm not coding, you'll almost always find me with music playing.
-                        I love everything from Vocaloid and speedcore to heavy metal.
-                        I'm also a huge cat person, and I'm probably customizing my Arch Linux setup or playing rhythm games.
-                        I learn very quickly when something really catches my interest, and I love a good challenge.
-                    </p>
-                    <br>
-                    <p>
-                        I'm kinda new here so please have mercy on me &#128591;
-                    </p>
-                </article>
-            </div>
-        </section>
-
-        <section class="interests">
-            <div class="container">
-                <h2>My Interests</h2>
-                <div class="interests-container">
-                    <article class="interest-card">
-                        <div class="interest-icon">
-                            <i class="fab fa-linux"></i>
-                        </div>
-                        <h3>Linux Systems</h3>
-                        <p>
-                            Daily Arch Linux user who enjoys customizing it
-                        </p>
-                    </article>
-                    <article class="interest-card">
-                        <div class="interest-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Backend Dev</h3>
-                        <p>
-                            Currently primarily using C# for the large amounts of features
-                        </p>
-                    </article>
-                    <article class="interest-card">
-                        <div class="interest-icon">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <h3>Music</h3>
-                        <p>
-                            I've wanted to learn creating music for a while now ;-;
-                        </p>
-                    </article>
-                    <article class="interest-card">
-                        <div class="interest-icon">
-                            <i class="fa-solid fa-gears"></i>
-                        </div>
-                        <h3>Tech</h3>
-                        <p>
-                            Wanna learn docker and a few other things once able to &gt;.&lt;
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="fun-facts">
-            <div class="container">
-                <h2>My Journey &amp; Goals</h2>
-                <button type="button" class="collapsible" aria-label="Toggle My Coding Journey Section">
-                    My Coding Journey
-                </button>
-                <article class="content">
-                    <div class="dropdown-card">
-                        <p>
-                            I started learning to code in early <time datetime="2025">2025</time>
-                            and made my first GitHub commit on <time datetime="4-29">April 29th</time>.
-                            As someone with a certain degree of autism,
-                            I enjoy figuring out complex problems and how different systems fit together,
-                            which is why backend development is so interesting to me.
-                            I'm a quick learner and I'm always looking for the next thing to understand.
-                        </p>
-                    </div>
-                </article>
-
-                <button type="button" class="collapsible" aria-label="Toggle My Tech Stack &amp; Preferences Section">
-                    My Tech Stack &amp; Preferences
-                </button>
-                <article class="content">
-                    <div class="dropdown-card">
-                        <p>
-                            • Main Programming Language: I use C# and am comfortable building things with it.
-                        </p>
-                        <p>
-                            • Learning Now: C#'s massive range of features in all directions.
-                        </p>
-                        <p>
-                            • Web Stuff: I know my way around HTML, CSS, and JavaScript.
-                        </p>
-                        <p>
-                            • Operating System: I use Arch Linux everyday, used to be windows only user.
-                        </p>
-                        <p>
-                            • Background Noise: I basically have music playing 24/7 while I work.
-                        </p>
-                        <p>
-                            • Languages: I'm German, but fluent in English.
-                        </p>
-                    </div>
-                </article>
-
-                <button type="button" class="collapsible" aria-label="Toggle My Aspirations Section">
-                    My Aspirations
-                </button>
-                <article class="content">
-                    <div class="dropdown-card">
-                        <p>
-                            My biggest goal right now is to get so comfortable at C# so that I can help contribute to osu!lazer.
-                            It's my most favorite game, and I'd love to help make it even better. I gotta click the circles!
-                        </p>
-                        <p>
-                            In the long run, I want to work on big, challenging backend systems and keep contributing to open-source projects.
-                            I want to build things that are both smart and reliable unlike some programs that I'm not gonna mention -_-<br>
-                            Btw Linus Torvalds is my god &lt;3
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="contact">
-            <div class="container">
-                <h2>Let's Connect!</h2>
-                <div class="card">
-                    <p>
-                        Love backend development and complex systems as much as I do?
-                        Let's build something amazing together!
-                    </p>
-                    <p>
-                        Feel free to reach out for collaborations or just to chat about Programming, Linux, or Music:
-                    </p>
-                    <p>
-                        Email: <a href="mailto:ame@akeoot.org">ame@akeoot.org</a>
-                    </p>
-                    <br>
-                    <img src="/images/im_goated.webp" alt="cat stretched with a header saying 'wait im goated'" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <p>
-                    <a href="https://github.com/Akeoott" aria-label="GitHub: Akeoott" target="_blank" referrerpolicy="strict-origin-when-cross-origin">
-                        GitHub (Akeoott)
-                    </a>
-                    <br>
-                    2025 - <span id="current-year"></span> by Ame
-                </p>
-            </div>
-        </footer>
-    </main>
-    <script src="/js/script.js" defer></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
+
+<style>
+    /* Prevent white flash XP */
+    html {
+        background-color: #121212;
+    }
+</style>
