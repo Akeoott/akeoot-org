@@ -15,5 +15,9 @@ if ('scrollRestoration' in history) {
 }
 
 requestAnimationFrame(() => {
-    document.getElementById("page-loader")?.classList.add("hidden");
+    const loader = document.getElementById("page-loader");
+    if (loader) {
+        loader.classList.add("hidden");
+        setTimeout(() => loader.remove(), 500);
+    }
 });

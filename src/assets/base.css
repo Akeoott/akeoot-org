@@ -26,6 +26,16 @@
     z-index: 0;
   }
 
+  /* Page fade in */
+  header {
+    @apply animate-fadeInTop
+  }
+
+  section {
+    @apply animate-fadeInBottom
+  }
+
+  /* Other global styles */
   a {
     @apply text-primary underline;
     @apply hover:text-white;
@@ -41,6 +51,10 @@
 
   h2::after {
     @apply content-[''] absolute w-[50%] h-0.75 left-0 -bottom-1.25 bg-primary rounded-[3px];
+  }
+
+  h2.no-line::after {
+    @apply w-[0%];
   }
 
   h3 {

@@ -4,7 +4,7 @@
             <h1 class="font-bold text-5xl text-primary mb-5">
                 404
             </h1>
-            <h2 class="font-bold text-2xl text-primary-dark mb-5">
+            <h2 class="font-bold text-2xl text-primary-dark mb-5 no-line">
                 Page Not Found
             </h2>
             <p>

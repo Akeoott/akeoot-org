@@ -2,23 +2,3 @@
 @import "./theme.css";
 @import "./base.css";
 @import "./components.css";
-
-#page-loader {
-  position: fixed;
-  inset: 0;
-  background: #121212;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  transition: opacity 0.3s ease;
-}
-
-#page-loader.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.loader {
-  @apply w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin;
-}
