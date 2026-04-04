@@ -26,15 +26,6 @@
     z-index: 0;
   }
 
-  /* Page fade in */
-  header {
-    @apply animate-fadeInTop
-  }
-
-  section {
-    @apply animate-fadeInBottom
-  }
-
   /* Other global styles */
   a {
     @apply text-primary underline;
