@@ -2,9 +2,11 @@
     <MainLayout>
         <router-view />
     </MainLayout>
+    <CompCursorFollower />
 </template>
 
 <script setup lang="ts">
+import CompCursorFollower from '@/components/CompCursorFollower.vue';
 import MainLayout from '@/layouts/MainLayout.vue';
 import Lenis from 'lenis';
 import { nextTick, onMounted, onUnmounted } from 'vue';
