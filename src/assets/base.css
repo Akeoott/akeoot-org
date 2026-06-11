@@ -9,7 +9,6 @@
   }
 
   header {
-    background: linear-gradient(to right, var(--black), var(--dark-gray));
     position: relative;
     overflow: hidden;
   }

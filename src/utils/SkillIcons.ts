@@ -4,7 +4,7 @@ export class SkillIcons {
         "nodejs", "vue", "tailwind", "js", "ts", "html", "css"
     ];
 
-    private container: HTMLElement | null;
+    private readonly container: HTMLElement | null;
 
     constructor(containerId: string) {
         this.container = document.getElementById(containerId);

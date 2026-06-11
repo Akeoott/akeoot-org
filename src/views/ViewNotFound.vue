@@ -14,7 +14,7 @@
             </p>
             <div class="pt-8">
                 <a class="text-bg-700 font-bold no-underline inline-block bg-primary rounded-xl px-5 py-2.5 transition-transform duration-300 hover:transform-[scale(1.1)] " href="/">
-                    Go to Rootpage
+                    Go to Root-page
                 </a>
             </div>
         </div>

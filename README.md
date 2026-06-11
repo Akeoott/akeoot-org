@@ -15,4 +15,4 @@ other things might get hosted there as well.
 Btw, I moved from a static page to a<br>
 Node.js project with Vue 3, Vite, TypeScript, and Tailwind CSS!
 
-finally getting an upgrade.
+Finally getting an upgrade.

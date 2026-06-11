@@ -3,7 +3,7 @@
         <div class="container">
             <div class="flex flex-col items-center text-center mt-20 gap-6">
                 <div class="profile-img">
-                    <img src="/images/death_accomplished_PINK.webp" alt="Ame's profile picture" decoding="async" loading="eager" width="142px" height="142px">
+                    <img src="/images/death_accomplished_PINK.webp" alt="Ame's profile picture" decoding="async" loading="eager" width="150" height="150">
                 </div>
 
                 <h1 class="header-1 gradient">Ame</h1>
