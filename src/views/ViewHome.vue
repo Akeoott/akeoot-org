@@ -11,7 +11,7 @@
                 <p class="text-[1.2rem] text-primary">
                     (Akeoot/Akeoott)<br>Backend Developer &amp; Linux Enthusiast<br>
                     <span class="text-[1rem] text-primary-dark">
-                        This page is my bio. This ain't a portfolio.<br>
+                        This page is my bio. This is not a portfolio.<br>
                         Don't treat this like a professional page.
                     </span>
                 </p>
@@ -41,7 +41,7 @@
                 </p>
                 <br>
                 <p>
-                    I've gathered some experience by now, but still not an expert!
+                    I've gathered a good amount of experience by now, but still not an expert!
                 </p>
             </article>
         </div>
@@ -55,9 +55,9 @@
 
             <div class="grid gap-6 grid-cols-[repeat(auto-fill,minmax(250px,1fr))]">
                 <InterestCard title="Linux Systems" description="Daily Arch Linux user who's actually productive using it (unlike u)" icon='<i class="fab fa-linux"></i>' />
-                <InterestCard title="Backend Dev" description="Currently primarily using C# for solid backends with many features" icon='<i class="fas fa-code"></i>' />
+                <InterestCard title="Backend Dev" description="I main C# and will specialize in it! Making things that actually work" icon='<i class="fas fa-code"></i>' />
                 <InterestCard title="Music" description="I've wanted to learn creating music for a while now ;-; (help)" icon='<i class="fas fa-music"></i>' />
-                <InterestCard title="Tech" description="Wanna learn docker, PostgreSQL and other things once i get to it >.<" icon='<i class="fa-solid fa-gears"></i>' />
+                <InterestCard title="Tech" description="Getting more into low level performance improvements and AvaloniaUI" icon='<i class="fa-solid fa-gears"></i>' />
             </div>
         </div>
     </section>
@@ -78,7 +78,7 @@
                         I started learning to code in early <time datetime="2025">2025</time>
                         and made my first GitHub commit on <time datetime="4-29">April 29th</time>.
                         As someone with a certain degree of autism,
-                        I enjoy figuring out complex problems and how different systems fit together,
+                        I enjoy solving problems and and love figuring out how things actually work,
                         which is why backend development is so interesting to me.
                         I'm a quick learner and I'm always looking for the next thing to understand.
                     </p>
@@ -93,16 +93,16 @@
                 <div class="dropdown-card">
                     <ul class="list-[circle] pl-6 space-y-1">
                         <li>
-                            <span class="font-bold">Programming Lang:</span>
-                            I use C# and am comfortable building things with it.
+                            <span class="font-bold">Stack:</span>
+                            I main C# and am comfortable building things with it.
                         </li>
                         <li>
                             <span class="font-bold">Learning Now:</span>
-                            Frontend frameworks, containers, databases.
+                            AvaloniaUI, low level performance improvements in C#.
                         </li>
                         <li>
-                            <span class="font-bold"> Web Stuff:</span>
-                            I know my way around Vue, Tailwind, TypeScript.
+                            <span class="font-bold">Web Stuff:</span>
+                            I know my way around Vue, Tailwind and TypeScript (this site is built on those)
                         </li>
                         <li>
                             <span class="font-bold">Operating System:</span>
@@ -114,7 +114,7 @@
                         </li>
                     </ul>
                     <p class="pt-4">
-                        I know my way around most things!
+                        I know my way around a good amount of things!
                     </p>
                     <figure id="skillicons" class="pt-1 grid grid-cols-[repeat(auto-fill,minmax(50px,1fr))]"></figure>
                 </div>
@@ -125,14 +125,14 @@
             </button>
             <article class="content">
                 <div class="dropdown-card">
-                    <p>
-                        My biggest goal right now is to get so comfortable at C# so that I can help contribute to osu!lazer.
+                    <p class="mb-5">
+                        My biggest goal right now is to specialize in C# to a deeper level so that I can help contribute to osu!lazer.
                         It's my most favorite game, and I'd love to help make it even better. I gotta click the circles!
                     </p>
                     <p>
-                        In the long run, I want to work on big, challenging backend systems and keep contributing to open-source projects.
+                        In the long run, I want to work on big, backend systems and keep contributing to open-source projects.
                         I want to build things that are both smart and reliable unlike some programs that I'm not gonna mention -_-<br>
-                        Btw Linus Torvalds is my god &lt;3
+                        Btw Linus Torvalds is freaking cool &lt;3
                     </p>
                 </div>
             </article>
@@ -146,17 +146,14 @@
             </h2>
 
             <article class="card hover-up hover-shadow">
-                <p>
-                    Love backend development and complex systems as much as I do?
-                    Let's build something amazing together!
+                <p class="mb-3">
+                    Love open source and are comfortable with the .NET SDK?<br>
+                    Then feel free to reach out to me! It can be about anything really :P<br>
+                    Email: <a href="mailto:akeoot@pm.me">akeoot@pm.me</a>
                 </p>
-                <p>
-                    Feel free to reach out for collaborations about Programming, Linux, or Music:
-                </p>
-                <p>
-                    Email: <a href="mailto:ame@akeoot.org">ame@akeoot.org</a>
-                </p>
-                <br>
+                <blockquote class="mb-3 text-[1rem] text-primary-dark">
+                    IMPORTANT: No job offers, "business opportunities", or malicious messages. I won't reply.
+                </blockquote>
                 <img class="w-full object-cover rounded-[15px]" src="/images/im_goated.webp" decoding="async" loading="lazy" alt="cat stretched with a header saying 'wait im goated'">
             </article>
         </div>
