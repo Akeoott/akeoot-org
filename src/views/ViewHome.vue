@@ -35,8 +35,8 @@
                 <div class="my-8 h-1 gradient-divider"></div>
                 <p>
                     When I'm not coding, you'll almost always find me with music playing.
-                    I love everything from Vocaloid to breakcore to heavy metal etc.
-                    I'm also a huge cat person, and I'm probably customizing my Arch Linux setup or playing rhythm games.
+                    I love everything from Vocaloid to K-pop to breakcore etc.
+                    I'm also a huge cat person, and I'm probably lusting over Felix from stray kids or playing rhythm games like osu or project sekai.
                     I learn very quickly when something really catches my interest, and I love a good challenge.
                 </p>
                 <br>
