@@ -1,9 +1,12 @@
 <template>
-    <main>
-        <slot />
-    </main>
-    <CompFooter />
+    <div class="flex flex-col min-h-screen">
+        <main class="grow">
+            <slot />
+        </main>
+        <CompFooter/>
+    </div>
 </template>
+
 
 <script lang="ts">
 import CompFooter from '@/components/CompFooter.vue';

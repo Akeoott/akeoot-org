@@ -1,9 +1,11 @@
 import Home from '@/views/ViewHome.vue';
 import NotFound from '@/views/ViewNotFound.vue';
+import Privacy from '@/views/ViewPrivacyPolicy.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     { path: '/', component: Home },
+    { path: "/privacy", component: Privacy },
     { path: "/:pathMatch(.*)*", component: NotFound },
 ]
 
