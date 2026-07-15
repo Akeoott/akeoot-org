@@ -17,7 +17,7 @@
                 <p class="mb-4">
                     Our source code contains <strong>zero</strong> tracking scripts, analytics, cookies, or data-collection mechanisms.
                     We do not store, log, or transmit any of your personal data because we don't have our own server.
-                    Since we hold absolutely none of your data, we cannot fulfill access, deletion, or correction requests—because there is simply
+                    Since we hold absolutely none of your data, we cannot fulfill access, deletion, or correction requests, because there is simply
                     nothing to give.
                 </p>
                 <div class="my-8 h-1 gradient-divider"></div>
