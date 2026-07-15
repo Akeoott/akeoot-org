@@ -36,7 +36,7 @@
   }
 
   h2 {
-    @apply relative inline-block mb-6 text-[1.8rem] font-bold text-primary;
+    @apply relative inline-block mb-8 text-[1.8rem] font-bold text-primary;
   }
 
   h2::after {

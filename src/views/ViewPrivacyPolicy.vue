@@ -12,8 +12,8 @@
 
     <section class="py-15 bg-bg-800">
         <div class="container">
+            <h2>Data Collection</h2>
             <article class="card hover-up hover-shadow">
-                <h2>Data Collection</h2>
                 <p class="mb-4">
                     Our source code contains <strong>zero</strong> tracking scripts, analytics, cookies, or data-collection mechanisms.
                     We do not store, log, or transmit any of your personal data because we don't have our own server.
@@ -40,8 +40,8 @@
 
     <section class="py-15 bg-bg-900">
         <div class="container">
+            <h2>Your Rights &amp; Third-Party Links</h2>
             <article class="card hover-up hover-shadow">
-                <h2>Your Rights &amp; Third-Party Links</h2>
                 <p class="mb-4">
                     Because we store no personal data, we cannot action individual data requests.
                     For full details on how Cloudflare processes data, their international transfers (SCCs), and their cookie practices,
