@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "./components.css";
+
+@layer base {
+    body {
+        color: var(--color-text);
+        line-height: 1.6;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+}

@@ -1,0 +1,23 @@
+@layer components {
+    .custom-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #3a3a3a transparent;
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+        background: #3a3a3a;
+        border-radius: 10px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
