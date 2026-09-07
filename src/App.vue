@@ -1,36 +1,26 @@
-<template>
-    <MainLayout>
-        <router-view />
-    </MainLayout>
-    <CompCursorFollower />
-</template>
-
 <script setup lang="ts">
-import CompCursorFollower from '@/components/CompCursorFollower.vue';
-import MainLayout from '@/layouts/MainLayout.vue';
-import Lenis from 'lenis';
-import { nextTick, onMounted, onUnmounted } from 'vue';
+import { useLenis } from '@/composables/useLenis';
+import { useLoader } from '@/composables/useLoader';
+import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
-let lenis: Lenis | null = null;
+import CursorFollower from '@/components/CursorFollower.vue';
+import MainLayout from '@/layouts/MainLayout.vue';
+
+const { hideLoader } = useLoader();
+const router = useRouter();
+
+useLenis();
 
 onMounted(async () => {
-    await nextTick();
-
-    lenis = new Lenis({
-        duration: 1,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-    });
-
-    function raf(time: number) {
-        lenis?.raf(time);
-        requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-});
-
-onUnmounted(() => {
-    lenis?.destroy();
+  await router.isReady();
+  hideLoader();
 });
 </script>
+
+<template>
+  <component :is="$route.meta.layout || MainLayout">
+    <router-view />
+  </component>
+  <CursorFollower />
+</template>

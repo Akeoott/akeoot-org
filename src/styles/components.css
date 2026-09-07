@@ -1,0 +1,38 @@
+/* global comps */
+@layer components {
+  .bg-full-width {
+    @apply mx-[-100vw] px-[100vw];
+    clip-path: inset(0 calc(100vw - 100%));
+  }
+
+  .card {
+    @apply p-8 bg-bg-700 rounded-[15px] border-primary border-l-4;
+  }
+
+  .gradient-divider {
+    @apply my-8 h-0.75 bg-linear-to-r from-transparent via-primary to-transparent;
+  }
+}
+
+/* hover */
+@layer components {
+  .hover-border {
+    @apply border border-transparent transition-all ease-out duration-500;
+    @apply hover:border-primary;
+  }
+
+  .hover-grow {
+    @apply transition-all ease-out duration-500;
+    @apply hover:transform-[scale(1.05)];
+  }
+
+  .hover-up {
+    @apply transition-all ease-out duration-500;
+    @apply hover:transform-[translateY(-4px)];
+  }
+
+  .hover-shadow {
+    @apply shadow-element-secondary;
+    @apply hover:shadow-element-secondary-hover;
+  }
+}

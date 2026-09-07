@@ -9,9 +9,10 @@
   --color-bg-900: #121212;
   --color-bg-800: #1a1a1a;
   --color-bg-700: #2a2a2a;
+  --color-bg-600: #3a3a3a;
 
   /* Normal Text */
-  --color-text: #ffffff;
+  --color-text: #fff;
 
   /* Shadows */
   --text-shadow-primary: 0 0 10px rgba(245, 198, 203, 0.3);

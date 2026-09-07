@@ -2,138 +2,147 @@ type AccordionItem = HTMLElement;
 type AccordionContent = HTMLElement;
 
 interface AccordionOptions {
-    selector?: string;
-    closeDelay?: number;
-    openDelay?: number;
-    allowMultipleOpen?: boolean;
+  selector?: string;
+  closeDelay?: number;
+  openDelay?: number;
+  allowMultipleOpen?: boolean;
 }
 
 export class CollapsibleAccordion {
-    private items: AccordionItem[] = [];
-    private options: Required<AccordionOptions>;
-    private animating = new WeakSet<HTMLElement>();
+  private items: AccordionItem[] = [];
+  private options: Required<AccordionOptions>;
+  private animating = new WeakSet<HTMLElement>();
+  private contentToItem = new WeakMap<HTMLElement, AccordionItem>();
+  private resizeObserver: ResizeObserver;
 
-    constructor(options: AccordionOptions = {}) {
-        this.options = {
-            selector: options.selector ?? '.collapsible',
-            closeDelay: options.closeDelay ?? 300,
-            openDelay: options.openDelay ?? 125,
-            allowMultipleOpen: options.allowMultipleOpen ?? false
-        };
+  constructor(options: AccordionOptions = {}) {
+    this.options = {
+      selector: options.selector ?? '.collapsible',
+      closeDelay: options.closeDelay ?? 300,
+      openDelay: options.openDelay ?? 125,
+      allowMultipleOpen: options.allowMultipleOpen ?? false
+    };
 
-        this.init();
-        this.addResizeListener();
-    }
+    this.resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const content = entry.target as HTMLElement;
+        const item = this.contentToItem.get(content);
+        if (!item) continue;
 
-    private init(): void {
-        this.items = Array.from(
-            document.querySelectorAll<AccordionItem>(this.options.selector)
-        );
-
-        this.items.forEach(item => {
-            item.setAttribute(
-                'aria-expanded',
-                String(item.classList.contains('active'))
-            );
-
-            item.addEventListener('click', () => this.onItemClick(item));
-        });
-    }
-
-    private onItemClick(item: AccordionItem): void {
-        if (this.animating.has(item)) return;
-
-        const content = this.getContent(item);
-        if (!content) return;
-
-        const isActive = item.classList.contains('active');
-
-        if (!this.options.allowMultipleOpen) {
-            this.closeOthers(item);
+        if (item.classList.contains('active') && !this.animating.has(item)) {
+          content.style.maxHeight = `${content.scrollHeight}px`;
         }
+      }
+    });
 
-        if (isActive) {
-            this.collapse(item, content);
-        } else {
-            this.expand(item, content);
-        }
+    this.init();
+  }
+
+  private init(): void {
+    this.items = Array.from(
+      document.querySelectorAll<AccordionItem>(this.options.selector)
+    );
+
+    this.items.forEach(item => {
+      const content = this.getContent(item);
+      if (!content) return;
+
+      this.contentToItem.set(content, item);
+      this.resizeObserver.observe(content);
+
+      item.setAttribute(
+        'aria-expanded',
+        String(item.classList.contains('active'))
+      );
+
+      item.addEventListener('click', () => this.onItemClick(item));
+    });
+  }
+
+  private onItemClick(item: AccordionItem): void {
+    if (this.animating.has(item)) return;
+
+    const content = this.getContent(item);
+    if (!content) return;
+
+    const isActive = item.classList.contains('active');
+
+    if (!this.options.allowMultipleOpen) {
+      this.closeOthers(item);
     }
 
-    private closeOthers(current: AccordionItem): void {
-        this.items.forEach(item => {
-            if (item === current) return;
-            if (!item.classList.contains('active')) return;
-
-            const content = this.getContent(item);
-            if (!content) return;
-
-            this.collapse(item, content);
-        });
+    if (isActive) {
+      this.collapse(item, content);
+    } else {
+      this.expand(item, content);
     }
+  }
 
-    private expand(item: AccordionItem, content: AccordionContent): void {
-        this.animating.add(item);
+  private closeOthers(current: AccordionItem): void {
+    this.items.forEach(item => {
+      if (item === current) return;
+      if (!item.classList.contains('active')) return;
 
-        item.classList.add('active');
-        item.setAttribute('aria-expanded', 'true');
+      const content = this.getContent(item);
+      if (!content) return;
 
-        item.style.borderRadius = '15px 15px 0 0';
-        content.style.borderRadius = '0 0 15px 15px';
+      this.collapse(item, content);
+    });
+  }
 
-        content.style.maxHeight = '0px';
+  private expand(item: AccordionItem, content: AccordionContent): void {
+    this.animating.add(item);
 
-        setTimeout(() => {
-            content.style.maxHeight = `${content.scrollHeight}px`;
+    item.classList.add('active');
+    item.setAttribute('aria-expanded', 'true');
 
-            content.scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest'
-            });
+    item.style.borderRadius = '15px 15px 0 0';
+    content.style.borderRadius = '0 0 15px 15px';
 
-            setTimeout(() => {
-                this.animating.delete(item);
-            }, this.options.closeDelay);
-        }, this.options.openDelay);
-    }
+    content.style.maxHeight = '0px';
 
-    private collapse(item: AccordionItem, content: AccordionContent): void {
-        this.animating.add(item);
+    content.getBoundingClientRect();
 
-        item.classList.remove('active');
-        item.setAttribute('aria-expanded', 'false');
+    setTimeout(() => {
+      content.style.maxHeight = `${content.scrollHeight}px`;
 
-        content.style.maxHeight = `${content.scrollHeight}px`;
+      content.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest'
+      });
+    }, this.options.openDelay);
 
-        content.getBoundingClientRect(); // force reflow
+    setTimeout(() => {
+      this.animating.delete(item);
+    }, this.options.openDelay + 50);
+  }
 
-        content.style.maxHeight = '0px';
+  private collapse(item: AccordionItem, content: AccordionContent): void {
+    this.animating.add(item);
 
-        setTimeout(() => {
-            item.style.borderRadius = '15px';
-            content.style.borderRadius = '0 0 15px 15px';
-            this.animating.delete(item);
-        }, this.options.closeDelay);
-    }
+    item.classList.remove('active');
+    item.setAttribute('aria-expanded', 'false');
 
-    private getContent(item: AccordionItem): AccordionContent | null {
-        const el = item.nextElementSibling;
-        if (!el || !(el instanceof HTMLElement)) return null;
-        return el;
-    }
+    content.style.maxHeight = `${content.scrollHeight}px`;
+    content.getBoundingClientRect();
+    content.style.maxHeight = '0px';
 
-    private addResizeListener(): void {
-        window.addEventListener('resize', () => {
-            this.items.forEach(item => {
-                if (!item.classList.contains('active')) return;
-                const content = this.getContent(item);
-                if (!content) return;
+    setTimeout(() => {
+      item.style.borderRadius = '15px';
+      content.style.borderRadius = '0 0 15px 15px';
+      this.animating.delete(item);
+    }, this.options.closeDelay);
+  }
 
-                const prevTransition = content.style.transition;
-                content.style.transition = 'none';
-                content.style.maxHeight = `${content.scrollHeight}px`;
-                content.getBoundingClientRect();
-                content.style.transition = prevTransition;
-            });
-        });
-    }
+  private getContent(item: AccordionItem): AccordionContent | null {
+    const el = item.nextElementSibling;
+    if (!el || !(el instanceof HTMLElement)) return null;
+    return el;
+  }
+
+  public destroy(): void {
+    this.resizeObserver.disconnect();
+    this.contentToItem = new WeakMap();
+    this.items = [];
+  }
 }
