@@ -24,18 +24,15 @@ const computedOpacity = computed(() => {
 
 let targetX = 0;
 let targetY = 0;
+let lastClientX = 0;
+let lastClientY = 0;
 let rafId: number | null = null;
 let lastTimestamp = 0;
+let originalBodyPosition: string | null = null;
 
-function getBodyOffset() {
-  const rect = document.body.getBoundingClientRect();
-  return { left: rect.left, top: rect.top };
-}
-
-function updateTarget(clientX: number, clientY: number) {
-  const { left, top } = getBodyOffset();
-  targetX = clientX - left;
-  targetY = clientY - top;
+function updateTargetFromLastClient() {
+  targetX = lastClientX + window.scrollX;
+  targetY = lastClientY + window.scrollY;
 }
 
 function animate(timestamp: number) {
@@ -58,7 +55,10 @@ function animate(timestamp: number) {
 }
 
 function onMouseMove(e: MouseEvent) {
-  updateTarget(e.clientX, e.clientY);
+  lastClientX = e.clientX;
+  lastClientY = e.clientY;
+  targetX = lastClientX + window.scrollX;
+  targetY = lastClientY + window.scrollY;
 
   if (!visible.value) {
     currentX.value = targetX;
@@ -67,12 +67,19 @@ function onMouseMove(e: MouseEvent) {
   }
 }
 
+function onScroll() {
+  if (!visible.value) return;
+  updateTargetFromLastClient();
+}
+
 function onMouseLeave() {
   visible.value = false;
 }
 
 function onMouseEnter(e: MouseEvent) {
-  updateTarget(e.clientX, e.clientY);
+  lastClientX = e.clientX;
+  lastClientY = e.clientY;
+  updateTargetFromLastClient();
   if (!visible.value) {
     currentX.value = targetX;
     currentY.value = targetY;
@@ -102,16 +109,16 @@ function onGlobalMouseOut(e: MouseEvent) {
 onMounted(() => {
   if (isMobile.value) return;
 
-  // Ensure body is the containing block for absolute positioning
   const body = document.body;
-  const originalPosition = window.getComputedStyle(body).position;
-  if (originalPosition === 'static') {
+  originalBodyPosition = window.getComputedStyle(body).position;
+  if (originalBodyPosition === 'static') {
     body.style.position = 'relative';
   }
 
   document.addEventListener('mousemove', onMouseMove);
   document.addEventListener('mouseleave', onMouseLeave);
   document.addEventListener('mouseenter', onMouseEnter);
+  window.addEventListener('scroll', onScroll);
   document.addEventListener('mouseover', onGlobalMouseOver);
   document.addEventListener('mouseout', onGlobalMouseOut);
 
@@ -123,6 +130,7 @@ onUnmounted(() => {
   document.removeEventListener('mousemove', onMouseMove);
   document.removeEventListener('mouseleave', onMouseLeave);
   document.removeEventListener('mouseenter', onMouseEnter);
+  window.removeEventListener('scroll', onScroll);
   document.removeEventListener('mouseover', onGlobalMouseOver);
   document.removeEventListener('mouseout', onGlobalMouseOut);
 
@@ -130,17 +138,15 @@ onUnmounted(() => {
     cancelAnimationFrame(rafId);
   }
 
-  // Restore body position if we changed it
-  const body = document.body;
-  if (body.style.position === 'relative') {
-    body.style.position = '';
+  if (originalBodyPosition !== null && document.body.style.position === 'relative') {
+    document.body.style.position = originalBodyPosition;
   }
 });
 </script>
 
 <template>
   <Teleport to="body">
-    <div class="cursor-follower" :style="{
+    <div ref="followerRef" class="cursor-follower" :style="{
       transform: `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`,
       width: CONFIG.SIZE + 'px',
       height: CONFIG.SIZE + 'px',
