@@ -1,15 +1,16 @@
+/* global comps */
 @layer components {
+  .bg-full-width {
+    @apply mx-[-100vw] px-[100vw];
+    clip-path: inset(0 calc(100vw - 100%));
+  }
+
   .card {
     @apply p-8 bg-bg-700 rounded-[15px] border-primary border-l-4;
   }
 
   .gradient-divider {
     @apply my-8 h-0.75 bg-linear-to-r from-transparent via-primary to-transparent;
-  }
-
-  .bg-full-width {
-    @apply mx-[-100vw] px-[100vw];
-    clip-path: inset(0 calc(100vw - 100%));
   }
 }
 

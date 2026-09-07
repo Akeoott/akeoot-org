@@ -57,7 +57,6 @@
       </p>
     </article>
   </section>
-
 </template>
 
 <style scoped />

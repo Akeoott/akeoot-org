@@ -29,11 +29,6 @@
     @apply hover:text-white;
   }
 
-  :focus {
-    outline: 2px solid var(--color-primary-dark);
-    outline-offset: 2px;
-  }
-
   h1 {
     @apply mb-2 text-[2.8rem] font-bold text-shadow-primary;
   }
