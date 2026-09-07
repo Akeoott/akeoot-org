@@ -1,24 +1,15 @@
 @layer components {
-  .custom-scroll {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-bg-600) transparent;
+  .card {
+    @apply p-8 bg-bg-700 rounded-[15px] border-primary border-l-4;
   }
 
-  .custom-scroll::-webkit-scrollbar {
-    width: 4px;
+  .gradient-divider {
+    @apply my-8 h-0.75 bg-linear-to-r from-transparent via-primary to-transparent;
   }
 
-  .custom-scroll::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .custom-scroll::-webkit-scrollbar-thumb {
-    background: var(--color-bg-600);
-    border-radius: 10px;
-  }
-
-  .custom-scroll::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  .bg-full-width {
+    @apply mx-[-100vw] px-[100vw];
+    clip-path: inset(0 calc(100vw - 100%));
   }
 }
 

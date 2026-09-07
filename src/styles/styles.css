@@ -8,6 +8,7 @@
   html {
     background-color: var(--color-bg-900);
   }
+
   html.lenis,
   html.lenis body {
     height: auto;
@@ -22,6 +23,38 @@
     display: none;
   }
 
+  /* Global */
+  a {
+    @apply text-primary underline;
+    @apply hover:text-white;
+  }
+
+  :focus {
+    outline: 2px solid var(--color-primary-dark);
+    outline-offset: 2px;
+  }
+
+  h1 {
+    @apply mb-2 text-[2.8rem] font-bold text-shadow-primary;
+  }
+
+  h2 {
+    @apply relative inline-block mb-8 text-[1.8rem] font-bold text-primary;
+  }
+
+  h2::after {
+    @apply content-[''] absolute w-[50%] h-0.75 left-0 -bottom-1.25 bg-primary rounded-[3px];
+  }
+
+  h2.no-line::after {
+    @apply w-[0%];
+  }
+
+  h3 {
+    @apply pb-3 font-bold;
+  }
+
+  /* Lenis overrides */
   .lenis.lenis-smooth {
     scroll-behavior: auto !important;
   }
@@ -43,16 +76,13 @@
     position: fixed;
     inset: 0;
     background: var(--color-bg-900);
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-
     z-index: 1000;
     transition: opacity 0.5s ease;
-
     opacity: 0;
     pointer-events: none;
   }

@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { useLenis } from '@/composables/useLenis';
 import { useLoader } from '@/composables/useLoader';
-import MainLayout from '@/layouts/MainLayout.vue';
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
+
+import MainLayout from '@/layouts/MainLayout.vue';
 
 const { hideLoader } = useLoader();
 const router = useRouter();
@@ -17,7 +18,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <MainLayout>
+  <component :is="$route.meta.layout || MainLayout">
     <router-view />
-  </MainLayout>
+  </component>
 </template>
