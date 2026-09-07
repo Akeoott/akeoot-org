@@ -172,23 +172,6 @@ export default defineComponent({
 </template>
 
 <style scoped>
-header {
-  position: relative;
-  overflow: hidden;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background:
-    radial-gradient(circle at 20% 50%, var(--color-primary) 0%, transparent 20%),
-    radial-gradient(circle at 80% 20%, var(--color-primary-darker) 0%, transparent 20%);
-  opacity: 0.1;
-  z-index: 0;
-}
-
 .gradient {
   background: var(--gradient-primary);
   background-clip: text;

@@ -2,7 +2,7 @@
 
 <template>
   <header class="bg-bg-900">
-    <div class="flex flex-col items-center text-center my-40">
+    <div class="flex flex-col items-center text-center py-40">
       <h1 class="font-bold text-5xl text-center text-primary">
         Privacy Policy
       </h1>
