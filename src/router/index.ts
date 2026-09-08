@@ -1,9 +1,10 @@
+import { createRouter, createWebHistory } from 'vue-router';
+
 import MainLayout from '@/layouts/MainLayout.vue';
 import NotFoundLayout from '@/layouts/NotFoundLayout.vue';
 import MainView from '@/views/MainView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue';
-import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   { path: '/', component: MainView, meta: { layout: MainLayout } },
