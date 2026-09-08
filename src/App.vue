@@ -4,7 +4,6 @@ import { useLoader } from '@/composables/useLoader';
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
-import CursorFollower from '@/components/CursorFollower.vue';
 import MainLayout from '@/layouts/MainLayout.vue';
 
 const { hideLoader } = useLoader();
@@ -22,5 +21,4 @@ onMounted(async () => {
   <component :is="$route.meta.layout || MainLayout">
     <router-view />
   </component>
-  <CursorFollower />
 </template>

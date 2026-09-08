@@ -20,7 +20,7 @@ export class SkillIcons {
     this.skills.forEach(skill => {
       const img: HTMLImageElement = document.createElement("img");
       img.className = "p-[3px]";
-      img.src = `/images/skillicons/${skill}.svg`;
+      img.src = `/src/assets/images/skillicons/${skill}.svg`;
       img.alt = `${skill} icon`;
       img.decoding = "async";
       img.loading = "lazy";

@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-
-const router = useRouter()
-
-const goHome = () => router.push('/')
+function goHome() {
+  window.location.href = '/'
+}
 </script>
 
 <template>

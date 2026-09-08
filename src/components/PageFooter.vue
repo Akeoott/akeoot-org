@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import { RouterLink } from 'vue-router';
-</script>
+<script setup lang="ts" />
 
 <template>
   <footer class="bg-bg-800 bg-full-width mt-10">
@@ -9,13 +7,13 @@ import { RouterLink } from 'vue-router';
         &copy; {{ new Date().getFullYear() }} Akeoott. All rights reserved.
       </p>
       <nav aria-label="Footer navigation">
-        <RouterLink to="/" aria-label="Homepage" class="no-underline font-bold">
+        <a href="/" aria-label="Homepage" class="no-underline font-bold">
           Homepage
-        </RouterLink>
+        </a>
         <span aria-hidden="true"> - </span>
-        <RouterLink to="/privacy" aria-label="Privacy policy" class="no-underline">
+        <a href="/privacy" aria-label="Privacy policy" class="no-underline">
           Privacy policy
-        </RouterLink>
+        </a>
         <span aria-hidden="true"> - </span>
         <a href="https://github.com/Akeoott" aria-label="GitHub: Akeoott" target="_blank" class="no-underline" referrerpolicy="strict-origin-when-cross-origin" rel="noopener noreferrer">
           GitHub
