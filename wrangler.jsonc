@@ -3,19 +3,19 @@
   "name": "akeoot-org",
   "compatibility_date": "2026-09-22",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
   },
   "observability": {
     "logs": {
       "enabled": true,
       "head_sampling_rate": 1,
       "invocation_logs": true,
-      "persist": true
+      "persist": true,
     },
     "traces": {
       "enabled": false,
       "head_sampling_rate": 1,
-      "persist": true
-    }
+      "persist": true,
+    },
   },
 }

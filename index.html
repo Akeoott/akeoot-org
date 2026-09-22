@@ -1,55 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ame's Bio</title>
+        <meta name="author" content="Ame, Akeoot" />
+        <meta
+            name="description"
+            content="Learn about Ame! Ame's personal bio and description. This is not a portfolio."
+        />
+        <meta name="theme-color" content="#ffcde1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://akeoot.org/" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Ame",
+                "url": "https://akeoot.org",
+                "jobTitle": "Backend Developer",
+                "sameAs": ["https://github.com/Akeoott"],
+                "knowsAbout": ["C#", "Linux", "Backend Development"]
+            }
+        </script>
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="akeoot.org" />
+        <meta property="og:title" content="Ame's Bio" />
+        <meta
+            property="og:description"
+            content="Learn about Ame! Ame's personal bio and description. This is not a portfolio."
+        />
+        <meta
+            property="og:image"
+            content="https://akeoot.org/favicon/web-app-manifest-512x512.png"
+        />
+        <meta property="og:url" content="https://akeoot.org/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <!-- Favicon -->
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Akeoot.org" />
+        <!-- Font Awesome -->
+        <link
+            rel="preload"
+            as="style"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link href="/src/styles/styles.css" rel="stylesheet" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ame's Bio</title>
-    <meta name="author" content="Ame, Akeoot">
-    <meta name="description" content="Learn about Ame! Ame's personal bio and description. This is not a portfolio.">
-    <meta name="theme-color" content="#ffcde1">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://akeoot.org/">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ame",
-        "url": "https://akeoot.org",
-        "jobTitle": "Backend Developer",
-        "sameAs": ["https://github.com/Akeoott"],
-        "knowsAbout": ["C#", "Linux", "Backend Development"]
-    }
-    </script>
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="akeoot.org">
-    <meta property="og:title" content="Ame's Bio">
-    <meta property="og:description" content="Learn about Ame! Ame's personal bio and description. This is not a portfolio.">
-    <meta property="og:image" content="https://akeoot.org/favicon/web-app-manifest-512x512.png">
-    <meta property="og:url" content="https://akeoot.org/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <!-- Favicon -->
-    <link rel="manifest" href="/favicon/site.webmanifest" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Akeoot.org" />
-    <!-- Font Awesome -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="/src/styles/styles.css" rel="stylesheet">
-</head>
+    <body>
+        <div id="page-loader" class="show">
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
 
-<body>
-    <div id="page-loader" class="show">
-        <div class="loader"></div>
-        <p>Loading...</p>
-    </div>
-
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-</body>
-
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>
