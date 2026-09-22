@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import { useLenis } from '@/composables/useLenis';
-import { useLoader } from '@/composables/useLoader';
-import { onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { useLenis } from '@/composables/useLenis'
+import { useLoader } from '@/composables/useLoader'
+import { onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
-import MainLayout from '@/layouts/MainLayout.vue';
+import MainLayout from '@/layouts/MainLayout.vue'
 
-const { hideLoader } = useLoader();
-const router = useRouter();
+const { hideLoader } = useLoader()
+const router = useRouter()
 
-useLenis();
+useLenis()
 
 onMounted(async () => {
-  await router.isReady();
-  hideLoader();
-});
+  await router.isReady()
+  hideLoader()
+})
 </script>
 
 <template>

@@ -7,15 +7,18 @@
         &copy; {{ new Date().getFullYear() }} Akeoott. All rights reserved.
       </p>
       <nav aria-label="Footer navigation">
-        <a href="/" aria-label="Homepage" class="no-underline font-bold">
-          Homepage
-        </a>
+        <a href="/" aria-label="Homepage" class="no-underline font-bold"> Homepage </a>
         <span aria-hidden="true"> - </span>
-        <a href="/privacy" aria-label="Privacy policy" class="no-underline">
-          Privacy policy
-        </a>
+        <a href="/privacy" aria-label="Privacy policy" class="no-underline"> Privacy policy </a>
         <span aria-hidden="true"> - </span>
-        <a href="https://github.com/Akeoott" aria-label="GitHub: Akeoott" target="_blank" class="no-underline" referrerpolicy="strict-origin-when-cross-origin" rel="noopener noreferrer">
+        <a
+          href="https://github.com/Akeoott"
+          aria-label="GitHub: Akeoott"
+          target="_blank"
+          class="no-underline"
+          referrerpolicy="strict-origin-when-cross-origin"
+          rel="noopener noreferrer"
+        >
           GitHub
         </a>
       </nav>

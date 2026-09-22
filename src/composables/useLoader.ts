@@ -1,27 +1,27 @@
 export function useLoader() {
-  const getLoader = () => document.getElementById('page-loader');
-  const getTextEl = () => document.querySelector('#page-loader p');
+  const getLoader = () => document.getElementById('page-loader')
+  const getTextEl = () => document.querySelector('#page-loader p')
 
   const showLoader = (text?: string) => {
-    const loader = getLoader();
+    const loader = getLoader()
     if (loader) {
-      loader.classList.add('show');
-      loader.style.display = '';
+      loader.classList.add('show')
+      loader.style.display = ''
     }
-    if (text) setLoaderText(text);
-  };
+    if (text) setLoaderText(text)
+  }
 
   const hideLoader = () => {
-    const loader = getLoader();
+    const loader = getLoader()
     if (loader) {
-      loader.classList.remove('show');
+      loader.classList.remove('show')
     }
-  };
+  }
 
   const setLoaderText = (text: string) => {
-    const p = getTextEl();
-    if (p) p.textContent = text;
-  };
+    const p = getTextEl()
+    if (p) p.textContent = text
+  }
 
-  return { showLoader, hideLoader, setLoaderText };
+  return { showLoader, hideLoader, setLoaderText }
 }

@@ -1,13 +1,13 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'InterestCard',
   props: {
     title: { type: String, required: true },
     description: { type: String, required: true },
-    icon: { type: String, required: true } // raw HTML for FontAwesome
-  }
+    icon: { type: String, required: true }, // raw HTML for FontAwesome
+  },
 })
 </script>
 
