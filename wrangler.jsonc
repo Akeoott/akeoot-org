@@ -3,6 +3,9 @@
   "name": "akeoot-org",
   "compatibility_date": "2026-09-22",
   "main": "src/main.ts",
+  "assets": {
+    "directory": "./dist"
+  },
   "observability": {
     "logs": {
       "enabled": true,
