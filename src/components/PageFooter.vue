@@ -1,29 +1,21 @@
-<script setup lang="ts" />
+<script setup lang="ts">
+const currentYear = new Date().getFullYear()
+</script>
 
 <template>
-  <footer class="bg-bg-800 bg-full-width mt-10">
-    <div class="flex justify-between py-15">
-      <p class="text-primary">
-        &copy; {{ new Date().getFullYear() }} Akeoott. All rights reserved.
+  <div class="absolute top-[100vh] w-full">
+    <footer class="bg-bg-800 text-text-muted text-center px-10 py-15">
+      <p class="flex flex-wrap justify-center items-center gap-x-2">
+        <span>
+          Copyright <time :datetime="String(currentYear)">{{ currentYear }}</time> Akeoott
+        </span>
+        <span>
+          &lt;<a href="mailto:akeoot@pm.me" class="hover:underline">akeoot@pm.me</a>&gt;
+        </span>
       </p>
-      <nav aria-label="Footer navigation">
-        <a href="/" aria-label="Homepage" class="no-underline font-bold"> Homepage </a>
-        <span aria-hidden="true"> - </span>
-        <a href="/privacy" aria-label="Privacy policy" class="no-underline"> Privacy policy </a>
-        <span aria-hidden="true"> - </span>
-        <a
-          href="https://github.com/Akeoott"
-          aria-label="GitHub: Akeoott"
-          target="_blank"
-          class="no-underline"
-          referrerpolicy="strict-origin-when-cross-origin"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-      </nav>
-    </div>
-  </footer>
+      <p>By Ame (Akeoot/Akeoott)</p>
+    </footer>
+  </div>
 </template>
 
 <style scoped />

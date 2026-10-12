@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import PageFooter from '@/components/PageFooter.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="max-w-300 mx-auto px-6 py-0">
-    <RouterView />
-    <PageFooter />
-  </div>
+  <RouterView />
+  <PageFooter />
 </template>
 
-<style scoped />
+<style></style>

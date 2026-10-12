@@ -1,15 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import MainLayout from '@/layouts/MainLayout.vue'
-import NotFoundLayout from '@/layouts/NotFoundLayout.vue'
 import MainView from '@/views/MainView.vue'
-import NotFoundView from '@/views/NotFoundView.vue'
-import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
 
 const routes = [
   { path: '/', component: MainView, meta: { layout: MainLayout } },
-  { path: '/privacy', component: PrivacyPolicyView, meta: { layout: MainLayout } },
-  { path: '/:pathMatch(.*)*', component: NotFoundView, meta: { layout: NotFoundLayout } },
+  { path: '/:pathMatch(.*)*', component: MainView, meta: { layout: MainLayout } },
 ]
 
 const router = createRouter({
