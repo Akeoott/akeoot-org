@@ -1,0 +1,44 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'friday'
+      time: '08:00'
+      timezone: 'Europe/Berlin'
+    cooldown:
+      default-days: 5
+      semver-major-days: 14
+      semver-minor-days: 7
+      semver-patch-days: 3
+    labels:
+      - 'type/dependencies'
+      - 'type/security'
+    groups:
+      non-major-updates:
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+          - 'patch'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'friday'
+      time: '08:00'
+      timezone: 'Europe/Berlin'
+    cooldown:
+      default-days: 5
+    labels:
+      - 'type/Dependencies'
+      - 'type/Security'
+    groups:
+      non-major-updates:
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+          - 'patch'
