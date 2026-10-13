@@ -7,6 +7,10 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
-[*.{yaml,js,ts,vue,css,json,jsonc}]
+[*.{yaml,js,ts,vue,css}]
 insert_final_newline = true
+indent_size = 2
+
+[*.{json,jsonc}]
+insert_final_newline = false
 indent_size = 2

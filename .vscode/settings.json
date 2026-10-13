@@ -5,6 +5,19 @@
     "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
     "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .oxfmt*, .prettier*, prettier*, .editorconfig"
   },
+  "js/ts.format.enabled": false,
+  "[vue]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "vue.format.script.enabled": false,
+  "vue.format.template.enabled": false,
+  "vue.format.style.enabled": false,
+  "vue.format.wrapAttributes": "preserve",
+
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file"
