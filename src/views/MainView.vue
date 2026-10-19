@@ -2,7 +2,7 @@
 const socials = [
   { label: 'GitHub', icon: '\uf09b', href: 'https://github.com/Akeoott' },
   { label: 'osu!', icon: '\uf001', href: 'https://osu.ppy.sh/users/36050791' },
-  { label: 'Email', icon: '\uf0e0', href: 'mailto:akeoot@pm.me' },
+  { label: 'Email', icon: '\uf0e0', href: 'mailto:ame@akeoot.org' },
 ]
 </script>
 
@@ -13,7 +13,7 @@ const socials = [
 
       <div class="space-y-2 font-thin">
         <p class="text-text-muted text-[1.5rem] tracking-[0.3em]">code/music/osu!</p>
-        <a href="mailto:ame@akeoot.orf" class="hover:underline text-[1.5rem]">ame@akeoot.org</a>
+        <a href="mailto:ame@akeoot.org" class="hover:underline text-[1.5rem]">ame@akeoot.org</a>
       </div>
     </div>
 
