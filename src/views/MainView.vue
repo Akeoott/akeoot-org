@@ -13,7 +13,7 @@ const socials = [
 
       <div class="space-y-2 font-thin">
         <p class="text-text-muted text-[1.5rem] tracking-[0.3em]">code/music/osu!</p>
-        <a href="mailto:akeoot@pm.me" class="hover:underline text-[1.5rem]">akeoot@pm.me</a>
+        <a href="mailto:ame@akeoot.orf" class="hover:underline text-[1.5rem]">ame@akeoot.org</a>
       </div>
     </div>
 
