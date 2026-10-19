@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear()
           Copyright <time :datetime="String(currentYear)">{{ currentYear }}</time> Akeoott
         </span>
         <span>
-          &lt;<a href="mailto:akeoot@pm.me" class="hover:underline">akeoot@pm.me</a>&gt;
+          &lt;<a href="mailto:ame@akeoot.org" class="hover:underline">ame@akeoot.org</a>&gt;
         </span>
       </p>
       <p>By Ame (Akeoot/Akeoott)</p>
