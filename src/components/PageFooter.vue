@@ -7,7 +7,7 @@ const currentYear = new Date().getFullYear()
     <footer class="bg-bg-800 text-text-muted text-center px-10 py-15">
       <p class="flex flex-wrap justify-center items-center gap-x-2">
         <span>
-          Copyright <time :datetime="String(currentYear)">{{ currentYear }}</time> Akeoott
+          Copyright 2025-<time :datetime="String(currentYear)">{{ currentYear }}</time> Ame
         </span>
         <span>
           &lt;<a href="mailto:ame@akeoot.org" class="hover:underline">ame@akeoot.org</a>&gt;
