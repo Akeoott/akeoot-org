@@ -15,8 +15,8 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.3.5",
     "tailwindcss": "^4.3.5",
-    "vue": "^3.5.45",
-    "vue-router": "^5.5.0"
+    "vue": "^3.5.46",
+    "vue-router": "^5.5.1"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.6",
@@ -25,13 +25,13 @@
     "@vue/tsconfig": "^0.9.1",
     "jiti": "^2.7.0",
     "npm-run-all2": "^9.0.4",
-    "oxfmt": "^0.78.0",
-    "oxlint": "~1.93.0",
+    "oxfmt": "^0.79.0",
+    "oxlint": "~1.94.0",
     "typescript": "~6.0.3",
     "vite": "^8.3.8",
     "vite-plugin-vue-devtools": "^8.2.1",
     "vue-tsc": "^3.3.14",
-    "wrangler": "^4.161.0"
+    "wrangler": "^4.165.0"
   },
   "engines": {
     "node": "^22.18.0 || >=24.12.0"
